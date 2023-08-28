@@ -1,0 +1,129 @@
+.map-container {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.turmalina-content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.turmalina-mapa-component {
+  height: 100% !important;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#map {
+  height: 89vh;
+  width: 100vw;
+  height: 100% !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden !important;
+}
+
+/** Search **/
+.turmalina-search-municipio-field, .main-select {
+  z-index: 999999 !important;
+}
+
+#search-form {
+    position: relative;
+    top: 95px;
+    left: 50%;
+    width: 350px;
+    height: auto;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+
+#search-form:focus{
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+.button{
+  text-align: center;
+  padding: 0px 10px !important;
+  color: white !important;
+  font-size: 15px;
+  font-weight: 500;
+  background: #30ba9c!important;
+  border-radius: 1px !important;
+}
+
+.select{
+  padding: 5px 5px 5px 15px;
+  background-color: rgba(255,255,255,0.8);
+  width: 20rem;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.main-select{
+  display: flex;
+  flex-direction: row;
+  min-width: 50px;
+  padding: 2rem 2rem 4rem 0;
+  width: 100vw;
+  justify-content: right;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+@media screen and (min-width: 707px) and (max-width: 900px){
+    #search-form{
+        width: 180px !important;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 707px){
+    .select{
+        width: 15rem!important;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 450px){
+    #search-form{
+        top: 180px !important;
+        width: 250px !important;
+    }
+    .select{
+        width: 15rem!important;
+    }
+}
+
+.legend-container.leaflet-control {
+  position: relative;
+  display: flex;
+  width: 100vw!important;
+  padding: 20px;
+  height: 300px;
+  background-color: white!important;
+}
+
+.logos-container {
+  height: 100% !important;
+}
+
+.logos-container img {
+  height: 30px;
+}
+
+mat-form-field {
+  font-size: 1rem!important;
+}
+
+body.mat-typography {
+  width: 100vw!important;
+  height: 100vh!important;
+  overflow: hidden!important;
+}

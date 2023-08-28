@@ -1,0 +1,15 @@
+[ 
+    {
+        "nome": "CAMPINA GRANDE",
+        "data": "12/20/2002",
+        "urlprefeitura": "prefeitura.com",
+        "urlportal": "pref.com",
+        "codsepro": "12123123",
+        "pontuacao": "70",
+        "polygon": "1",
+        "pontuacao_maxima": "90",
+        "posicao": "2",
+        "rankingcolor": "blue",
+        "qtd": "20"
+    }
+]

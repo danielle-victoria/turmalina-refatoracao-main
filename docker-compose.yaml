@@ -1,0 +1,55 @@
+version: '3'
+
+services:
+  turmalina_db:
+    container_name: turmalina_db
+    image: postgres:14-alpine 
+    environment:
+      POSTGRES_PASSWORD: pass123
+      POSTGRES_DB: turmalina_db
+    ports:
+      - 5432:5432
+    networks:
+      - postgres-network
+    volumes:
+      - ./tm_database/dbinit/:/docker-entrypoint-initdb.d/
+
+  turmalina_api:
+    container_name: turmalina_api
+    build: tm_api/
+    depends_on:
+      - turmalina_db
+    command: ["./tm_api/wait-for-it.sh", "turmalina_db:5432", "--", "python3", "tm_api/app.py"]
+    environment:
+      DB_HOST: turmalina_db
+      DB_NAME: turmalina_db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASS: pass123
+    ports:
+      - 5000:5000
+    networks:
+      - postgres-network
+    volumes:
+      - .:/app
+
+  turmalina_crawler:
+    container_name: turmalina_crawler
+    build: tm_crawler/
+    depends_on:
+      - turmalina_api
+    environment:
+      DB_HOST: turmalina_db
+      DB_NAME: turmalina_db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASS: pass123
+    ports:
+      - "6800:6800"
+    networks:
+      - postgres-network
+
+networks: 
+  postgres-network:
+    driver: bridge
+

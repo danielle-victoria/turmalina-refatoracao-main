@@ -1,0 +1,11 @@
+{
+    "liveServer.settings.port": 5501,
+    "editor.quickSuggestions": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "razor": "html",
+        "plaintext": "pug"
+    },
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly"
+}

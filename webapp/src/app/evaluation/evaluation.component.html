@@ -1,0 +1,166 @@
+<div class="evaluation-component">
+    <!--city select-->
+    <div class="main-select">
+      <div *ngIf="!(getApiStatus() | async); then apiNotReady else apiReady"></div>
+  
+      <ng-template #apiNotReady>
+        <mat-form-field class="select city">
+          <mat-select placeholder="Carregando..." [disabled]="true" > </mat-select>
+        </mat-form-field>
+      </ng-template>
+  
+        <ng-template #apiReady>
+          <mat-form-field class="select city">
+            <mat-select
+              placeholder="Selecione o Município/Estado/Órgão Público"
+              [(ngModel)]="selectedValue"
+              name="municipio"
+              [formControl]="city"
+              #citySelect
+            >
+              <mat-option>
+                <ngx-mat-select-search
+                  placeholderLabel="Selecione o Município/Estado/Órgão Público"
+                  noEntriesFoundLabel="Nenhum município encontrado"
+                  [formControl]="cityFilter"
+                ></ngx-mat-select-search>
+              </mat-option>
+              <mat-option
+                *ngFor="let cityName of filteredCity | async"
+                [value]="cityName.public_entity"
+              >
+                {{ cityName.public_entity }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </ng-template>
+  
+      <button
+        mat-raised-button
+        class="button shadow-none"
+        (click)="searchDadosMunicipio(selectedValue)"
+      >
+        ACESSAR
+      </button>
+    </div>
+    <!--graphics-->
+    <div class="container">
+      <div class="text-center">
+        <div *ngIf="miniturmalina && conditionGraph === false" class="loading">
+          <img
+            class="gif-loading"
+            src="/assets/images/turmalina-minerando.gif"
+          />
+        </div>
+      </div>
+      <div class="text-center">
+        <div *ngIf="loading" class="loading">
+          <img
+            class="gif-loading"
+            src="/assets/images/ezgif.com-gif-maker.gif"
+          />
+          <p class="lead">
+            <img class="loading-gif" src="/assets/images/1484.png" />
+          </p>
+        </div>
+      </div>
+      <main
+        *ngIf="conditionGraph"
+        [style.visibility]="loading === true ? 'hidden' : 'visible'"
+      >
+        <h1>Relatório Visual</h1>
+        <section class="main-container">
+          <article class="info-cidade">
+            <div class="pontuacao">
+              <span class="pontos numero">{{ scoreTotal }}/{{ totalMaxPoints }}</span>
+              <span class="pontos">Pontos</span>
+            </div>
+            <span class="datas">
+              <span class="atualizacao"
+                >Última atualização: {{ lastUpdate }}</span
+              >
+            </span>
+            <a href="{{entityURL}}" class="portal">Portal do município</a>
+          </article>
+          <article class="fala-turmalinha flex">
+            <div class="wrapper-fala flex">
+              <blockquote>
+                Clique no ícone
+                <img
+                  src="/assets/images/lupa.svg"
+                  class="icone-lupa-texto"
+                />
+                para ver mais informações de cada categoria.
+              </blockquote>
+              <p>- Turmalina</p>
+            </div>
+            <img class="triangulo" src="/assets/images/triangle.svg" />
+            <img
+              src="/assets/images/ezgif.com-gif-maker.gif"
+              class="turmalinha"
+              alt="GIF Assistente turmalinha"
+            />
+          </article>
+          <article class="selecao-categorias">
+            <ul class="categorias">
+              <li *ngFor="let item of categoryValues; let i = index">
+                <div class="container-barra" id="{{ categoryLabels[i] }}">
+                  <div
+                    class="dados-barra"
+                    [style.width.%]="
+                      categoryMaxPoints[i] == 0
+                        ? 100
+                        : (categoryValues[i] / categoryMaxPoints[i]) * 100
+                    "
+                  >
+                    <div class="texto-barra" id="front">
+                      <p>{{ categoryPtLabels[i] }}</p>
+                      <p>{{ categoryValues[i] }}/{{ categoryMaxPoints[i] }}</p>
+                    </div>
+  
+                    <div class="texto-barra" id="back">
+                      <p>{{ categoryPtLabels[i] }}</p>
+                      <p>{{ categoryValues[i] }}/{{ categoryMaxPoints[i] }}</p>
+                    </div>
+                  </div>
+                </div>
+                <span class="category-search-btn-wrapper" (click)="showAlert2(i)"
+                  ><a class="category-search-btn"
+                    ><img src="/assets/images/lupa.svg" alt="" /></a
+                ></span>
+              </li>
+            </ul>
+          </article>
+          <article class="tabela-categorias">
+            <div class="cabecalho">
+              <div class="categoria-titulo-wrapper">
+                <p class="categoria-titulo"></p>
+              </div>
+              <div class="categoria-percentual" hidden>
+                <p class="texto-percentual"></p>
+              </div>
+            </div>
+            <div class="categoria-informacoes"></div>
+          </article>
+        </section>
+      </main>
+      <div
+        class="graphgrid"
+        [style.visibility]="loading === true ? 'hidden' : 'visible'"
+      >
+        <div class="graph">
+          <!--bar graph-->
+          <div [class.graph-one]="conditionGraph" class="graphBar">
+            <canvas #graphOneId id="barchart">{{ barchart }}</canvas>
+          </div>
+          <!--line graph-->
+          <div [class.graph-two]="conditionGraph" class="graphLine">
+            <canvas class="linechart" #graphTwoId id="timechart">{{
+              timechart
+            }}</canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,76 @@
+:host { 
+    --color-primary: #f8f9fd;
+    --color-light: #eceffc;
+    --color-dark: black;
+    --color-white : white;
+    --color-lightgreen: #6abeac;
+    --color-green: #4e949f;
+
+    --font-family: "Montserrat", sans-serif; 
+}
+.jumbotron{
+    font-family: var(--font-family) !important;
+    min-height: 100vh;
+}
+.form-group{
+    margin-bottom: 15px;
+}
+
+.btn:hover:active:focus{
+    outline: none !important;
+    box-shadow: 0px 12px 20px -6px rgba(0,0,0,0.21);
+}
+
+.btn-primary{
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+    color: var(--color-white) ;
+}
+
+.btn-primary:hover:focus{
+    border-color: var(--color-green) !important;
+    background-color: var(--color-green) !important;
+}
+
+.btn {
+	cursor: pointer;
+	border-width: 2px;
+	border-radius: 2px;
+	box-shadow: none !important;
+    font-size: 1rem;
+	font-weight: 550;
+	box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.12);
+    width: 10rem;
+}
+
+.button{
+    text-align: center;
+}
+
+/** Loading **/
+.container{
+    max-width: 80vw;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 2.5rem; */
+}
+
+.gif-loading{
+    width: 200px;
+}
+
+.loading{
+    margin-top: 20vh;
+}
+
+.lead{
+    font-size: 2rem;
+    color: #683c14;
+    font-weight: bold;
+}
+
+.loading-gif{
+    width: 80px;
+}

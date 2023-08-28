@@ -1,0 +1,16 @@
+__pycache__/
+
+.vscode/
+build/
+dbs/
+eggs/
+project.egg-info/
+env/
+logs/
+
+setup.py
+twistd.pid
+geckodriver.log
+
+*.json
+*.csv

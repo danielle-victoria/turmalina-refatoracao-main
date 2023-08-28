@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            color: #333;
+            background: white;
+            border: 1px solid grey;
+            font-size: 12pt;
+            border-collapse: collapse;
+        }
+        table th,
+        table td {
+            padding: 2px 4px;
+            border: 1px solid lightgrey;
+        }
+
+        table th {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Início</th>
+            <th>Fim</th>
+            <th>Executando?</th>
+            <th>Executando início</th>
+            <th>Score</th>
+            <th>Sumário</th>
+        </tr>
+        {% for ev in evaluations %}
+        <tr>
+            <td>{{ ev.name }}</td>
+            <td>{{ ev.start }}</td>
+            <td>{{ ev.end }}</td>
+            <td>{{ not ev.status }}</td>
+            <td>{{ ev.running_start if not ev.status else '-' }}</td>
+            <td>{{ ev.score }}</td>
+            <td>{{ ev.summary }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

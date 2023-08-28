@@ -1,0 +1,30 @@
+<div class="map-container">
+  <div>
+    <div class="turmalina-ranking" id="top3-widget">
+    </div>
+  </div>
+    <div class="main-select" >
+        <mat-form-field class="select city" [style.z-index]="10">
+            <mat-select placeholder="Selecione o Município/Estado/Órgão Público" [(ngModel)]="selectedValue" name="municipio" [formControl]="city" #citySelect>
+                <mat-option [style.z-index]="90">
+                    <ngx-mat-select-search placeholderLabel="Selecione o Município/Estado/Órgão Público" noEntriesFoundLabel="Nenhum município encontrado" [formControl]="cityFilter"></ngx-mat-select-search>
+                </mat-option>
+                <mat-option *ngFor="let cityName of filteredCity | async" [value]="cityName.public_entity">
+                    {{cityName.public_entity}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button [style.z-index]="10" mat-raised-button class="button shadow-none" (click)="searchDadosMunicipio(selectedValue)">ACESSAR</button>   
+    </div>
+  </div>
+  <div class="map-frame" >
+    <div  id="map" class="turmalina-mapa-component turmalina-content"  leaflet [leafletOptions]="mapOptions" [leafletLayers]="layers" (leafletMapReady)="mapReady($event)"></div>
+  </div>
+  <div class="infos">
+    <!--<div class="logos-container">
+      <a href="https://aria.ci.ufpb.br/"><img src= "../../../assets/images/a-aria.png" classname='aria-logo'/></a>
+      <a href="https://www.ufpb.br/"><img src="../../../assets/images/UFPB.png" class="ufpb-logo"/></a>
+      <a href="https://tce.pb.gov.br/"><img src="../../../assets/images/logo-tribunal-extensa.png" class="tce-logo"/></a>
+    </div>-->
+</div>
+

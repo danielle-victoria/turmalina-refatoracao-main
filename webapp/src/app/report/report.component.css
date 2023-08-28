@@ -1,0 +1,410 @@
+:host {
+  --color-primary: #eef9fb;
+  --color-light: #eef9fb;
+  --color-dark: black;
+  --color-white: white;
+  --color-lightblue: #6abeac;
+  --color-green: #58a897;
+  --color-greenfooter: #509c8c;
+  --font-family: "Roboto", sans-serif;
+}
+
+.report-component {
+  font-family: var(--font-family) !important;
+  min-height: 100vh;
+  margin-bottom: 110px;
+}
+
+.inline {
+  display: inline;
+}
+
+/********************* Form ************************/
+.button {
+  text-align: center;
+  margin: 0 5px;
+  width: 20%;
+  padding: 0px 30px 0px 30px !important;
+  color: var(--color-white) !important;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--color-lightblue) !important;
+  border-radius: 2px !important;
+}
+
+.alltables {
+  background: rgba(213, 218, 218) !important;
+}
+
+.city {
+  margin: 0px 5px;
+}
+
+.date {
+  margin: 0px 5px;
+}
+
+.range {
+  margin: 0px 5px 0px 5px !important;
+}
+
+.mat-raised-button {
+  min-width: 130px !important;
+  line-height: 50px !important;
+}
+
+.picker {
+  width: 100vw;
+}
+
+.main-select {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 2rem auto 20px auto;
+  padding: 10px;
+  gap: 10px;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+.select {
+  padding: 5px 5px 5px 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+  max-width: 80vw;
+}
+
+.gif-loading {
+  width: 200px;
+}
+
+.loading {
+  margin-top: 20vh;
+}
+
+.lead {
+  font-size: 2rem;
+  color: #683c14;
+  font-weight: bold;
+}
+
+.loading-gif {
+  width: 80px;
+}
+
+/* Nova Implementação */
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 2.5rem;
+  color: #696969;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #9e9e9e;
+}
+
+p {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.main-container {
+  width: 95vw;
+  max-width: 1191px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.wrapper-superior {
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: flex-start;
+}
+
+.info-cidade {
+  flex-grow: 1;
+  background-color: var(--color-white);
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+.pontos {
+  color: var(--color-green);
+  font-size: 2.5rem;
+}
+
+.pontos.numero {
+  font-size: 4.375rem;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.nome-cidade {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-top: -15px;
+  margin-bottom: 5px;
+  color: #979797;
+}
+
+.datas {
+  font-size: 1rem;
+  color: #bbbbbb;
+  font-family: "Open Sans", "Helvetica Neue";
+}
+
+.datas span:nth-child(2) {
+  font-weight: 300;
+}
+
+.datas span:nth-child(3)::after {
+  content: " • ";
+}
+
+.datas > span {
+  margin-right: 3px;
+}
+
+.portal {
+  color: #bbbbbb;
+  margin-top: 8px;
+  margin-left: -3px;
+}
+
+.fala-turmalinha {
+  flex-basis: 550px;
+  flex-grow: 1;
+  position: relative;
+  z-index: 3;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.fala-turmalinha img {
+  position: absolute;
+}
+
+.turmalinha {
+  width: 320px;
+  height: 300px;
+  z-index: -2;
+  left: 310px;
+  top: 20px;
+}
+
+.triangulo {
+  z-index: -1;
+  top: 140px;
+  left: 320px;
+  transform: scale(1.4);
+}
+
+.wrapper-fala {
+  flex: 0 0 360px;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 22px 30px;
+  gap: 15px;
+  background-color: var(--color-white);
+}
+
+.wrapper-fala p:first-of-type {
+  font-size: 1rem;
+  color: #8a8a8a;
+  width: 66%;
+}
+
+.wrapper-fala p:last-of-type {
+  font-size: 1rem;
+  color: #c9c9c9;
+}
+
+.fala-turmalinha svg {
+  width: 40px;
+  height: 100%;
+  margin-right: 5px;
+}
+
+.btn-baixar {
+  width: 100%;
+  align-self: center;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 10px;
+  background-color: var(--color-lightblue);
+  color: var(--color-white);
+}
+
+.btn-baixar:hover {
+  background-color: var(--color-green);
+}
+
+.lbar {
+  width: 200px;
+  height: 100%;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+  padding: 20px 20px;
+  margin-right: 10px;
+}
+
+.lead2 {
+  font-size: 2rem;
+  color: #683c14;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.loading-gif2 {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.pdf,
+.wrapper-pdf,
+embed {
+  width: 100%;
+  height: 800px;
+}
+
+@media (min-width: 701px) and (max-width: 1206px) {
+  .datas span:nth-child(3)::after {
+    content: "";
+  }
+
+  .wrapper-superior {
+    width: 650px;
+    align-self: center;
+  }
+
+  .fala-turmalinha {
+    flex-grow: 0;
+  }
+
+  .info-cidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 650px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-top: 100px;
+  }
+}
+
+.doc-iframe {
+  background:url(/assets/images/ezgif.com-gif-maker-3.gif) top center no-repeat;
+  height: 800px;
+}
+
+@media (max-width: 700px) {
+  .main-select {
+    flex-direction: column;
+  }
+
+  .mat-raised-button {
+    width: 100%;
+  }
+
+  .wrapper-superior {
+    gap: 20px;
+  }
+
+  .info-cidade,
+  .fala-turmalinha {
+    margin-bottom: 0px;
+  }
+
+  .pontos {
+    font-size: 1.5rem;
+  }
+
+  .pontos.numero {
+    font-size: 12vw;
+  }
+
+  .nome-cidade {
+    font-size: 6vw;
+    margin-top: -10px;
+  }
+
+  .datas {
+    font-size: 1rem;
+  }
+
+  .datas span:nth-child(3)::after {
+    content: " • ";
+  }
+
+  .turmalinha {
+    display: none;
+  }
+
+  .triangulo {
+    display: none;
+  }
+
+  .wrapper-fala {
+    flex: 1 0 0;
+  }
+
+  .wrapper-fala p:first-of-type {
+    text-align: center;
+    width: 100%;
+  }
+
+  h1 {
+    align-self: center;
+  }
+
+  .pdf {
+    text-align: center;
+  }
+}

@@ -1,0 +1,107 @@
+:host {
+    --space: 2rem;
+    --space-xs: calc(var(--space) / 3);
+    --space-sm: calc(var(--space) / 2);
+    --space-md: calc(var(--space) * 2);
+  
+    --color-primary: lightgray;
+    --color-accent: whitesmoke;
+    --color-dark: black;
+    --color-mid: gray;
+    --color-light: white;
+    --color-highlight: rgb(0, 197, 49);
+    --color-dark-red: rgb(87, 2, 2);
+    --color-lightgreen: #6abeac;
+    --color-greenfooter: #509c8c;
+  
+    --radius: 0.125rem;
+
+    --font-family: "Calibre Light", sans-serif;  
+}
+
+/********************* footer ************************/
+.section-footer {
+    background-color: var(--color-greenfooter);
+    /* line-height: 3rem; */
+    text-align: center;
+    padding: 40px 0px;
+    height: 170px;
+}
+.footer-page{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.footer-nav:hover{
+    color:rgb(24, 68, 65) !important;
+}
+.footer-nav{
+    display: block;
+    color: #f1f1f1;
+    font-size: 1rem;
+    text-decoration:none;
+    padding: 14px;
+    font-size: 18px;
+}
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    line-height: 60px;
+}
+.logos{
+    display: flex;
+}
+.logo-turmalina{
+    width: 11rem !important;
+}
+.logo-item{
+    width: 3rem;
+}
+.logo-ufpb{
+    width: 3.5rem;
+}
+.logo-aria{
+    width: 4rem;
+}
+.logo{
+    padding: 0 10px;
+}
+span{
+    color: #f1f1f1;
+    margin-top: 0.8rem;
+}
+@media screen and (min-width: 600px) and (max-width: 700px){
+    span{
+        display: none;
+    }
+    .footer-nav{
+        padding: 8px!important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section-footer {
+        height: 550px !important;
+    }
+
+    .footer-logo{
+        flex-direction: column;
+    }
+    .footer-page{
+        flex-direction: column;
+    }
+    .logos{
+        display: block;
+    }
+    .logo{
+        padding: 10px 0px ;
+    }
+    .footer-nav{
+        padding: 5px;
+    }
+    span{
+        display: none;
+    }
+}
+

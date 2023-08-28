@@ -1,0 +1,108 @@
+{
+    "Planejamento": {
+        "Plano Plurianual": {"max": 10, "key": "multiyearPlan"},
+        "Lei de Diretrizes Orçamentárias": {"max": 10, "key": "budgetGuidelinesLaw"},
+        "Lei Orçamentária Anual": {"max": 10, "key": "annualBudgetLaw"}
+    }, 
+    "Receita": {
+        "Unidade Gestora Arrecadadora": {"max": 15, "key": "managementUnitName"},
+        "Valor Previsto": {"max": 15, "key": "predictedAmount"},
+        "Valor Arrecadado": {"max": 15, "key": "collectionAmount"},
+        "Origem da Receita": {"max": 5, "key": "budgetRevenueSource"},
+        "Rúbrica/Descrição": {"max": 5, "key": "budgetRevenueDescription"}
+    },
+    "Receita Extraorçamentária": {
+        "Unidade Gestora Arrecadadora": {"max": 2, "key": "managementUnitName"},
+        "Valor Realizado": {"max": 15, "key": "realizedAmount"},
+        "Origem da receita": {"max": 5, "key": "extraBudgetRevenueSource"},
+        "Rúbrica/Descrição": {"max": 2, "key": "extraBudgetRevenueDescription"},
+        "Código adotado": {"max": 1, "key": "extraBudgetRevenueID"},
+        "Nomeclatura utilizada": {"max": 1, "key": "nomenclature"},
+        "Histórico": {"max": 5, "key": "extraBudgetRevenueHistory"}
+    },
+    "Despesa": {
+        "Valor fixado": {"max": 5, "key": "fixedAmount"},
+        "Valor pago": {"max": 5, "key": "paymentAmount"},
+        "Unidade Orçamentária": {"max": 10, "key": "managementUnitName"},
+        "Função": {"max": 5, "key": "budgetExpenditureFunction"},
+        "Subfunção": {"max": 5, "key": "budgetExpenditureSubfunction"},
+        "Programa": {"max": 5, "key": "budgetExpenditureProgram"},
+        "Ação": {"max": 5, "key": "budgetExpenditureAction"},
+        "Categoria Econômica": {"max": 5, "key": "economicCategory"},
+        "Natureza da Despesa": {"max": 5, "key": "budgetNature"},
+        "Modalidade de Aplicação": {"max": 5, "key": "budgetExpenditureModality"},
+        "Elemento da Despesa": {"max": 5, "key": "budgetExpenditureElement"},
+        "Número do Empenho": {"max": 5, "key": "comittedExpenditureID"},
+        "Data do Empenho": {"max": 5, "key": "comittedExpenditureDate"},
+        "Favorecido do Empenho": {"max": 10, "key": "creditorName"},
+        "CNPJ/CPF do Favorecido": {"max": 5, "key": "identificationNumber"},
+        "Número da Licitação": {"max": 8, "key": "bidID"},
+        "Modalidade da Licitação": {"max": 7, "key": "bidModality"},
+        "Valor do Empenho": {"max": 5, "key": "comittedValue"},
+        "Histórico do Empenho": {"max": 25, "key": "comittedExpenditureHistory"}
+    },
+    "Despesa Extraorçamentária":{
+        "Valor pago": {"max": 5, "key": "paymentAmount"},
+        "Órgão/Unidade Orçamentária": {"max": 2, "key": "managementUnitName"},
+        "Código adotado": {"max": 1, "key": "extraBudgetExpenditureID"},
+        "Nomenclatura": {"max": 5, "key": "extraBudgetExpenditureNomenclature"},
+        "Data de movimentação": {"max": 2, "key": "moveDate"},
+        "Descrição": {"max": 5, "key": "extraBudgetExpenditureDescription"},
+        "Número da Guia": {"max": 5, "key": "tabID"},
+        "Data da Guia": {"max": 5, "key": "tabDate"},
+        "Credor": {"max": 10, "key": "creditorName"},
+        "CNPJ/CPF do Credor": {"max": 5, "key": "identificationNumber"},
+        "Histórico": {"max": 25, "key": "tabHistory"}
+    },
+    "Licitações": {
+        "Edital": {"max": 60, "key": "notice"},
+        "Modalidade de Licitação": {"max": 10, "key": "bidModality"},
+        "Repartição/Setor Interessado": {"max": 10, "key": "managementUnitName"},
+        "Data de Publicação": {"max": 10, "key": "publicationDate"},
+        "Data de Realização": {"max": 10, "key": "realizationDate"},
+        "Número de Ordem/Série": {"max": 10, "key": "bidID"},
+        "Objeto": {"max": 10, "key": "object"},
+        "Nome dos Participantes": {"max": 10, "key": "bidderName"},
+        "CNPJ/CPF": {"max": 10, "key": "identificationNumber"},
+        "Valores": {"max": 10, "key": "bidderProposalAmount"}
+    },
+    "Contratos": {
+        "Unidade Gestora": {"max": 5, "key": "managementUnitName"},
+        "Nome do Contratado": {"max": 5, "key": "contractorName"},
+        "CNPJ/CPF do Contratado": {"max": 5, "key": "identificationNumber"},
+        "Data da Publicação": {"max": 5, "key": "publicationDate"},
+        "Vigência": {"max": 5, "key": "validityDate"},
+        "Valor Contratado": {"max": 5, "key": "contractAmount"},
+        "Objeto": {"max": 5, "key": "object"},
+        "Número do Contrato": {"max": 5, "key": "contractID"}
+    },
+    "Convênios":{
+        "Número do Convênio": {"max": 5, "key": "agreementID"},
+        "Concedente": {"max": 5, "key": "grantorName"},
+        "Convenente": {"max": 5, "key": "contractorName"},
+        "Data da Celebração": {"max": 5, "key": "celebrationDate"},
+        "Data da Publicação": {"max": 5, "key": "publicationDate"},
+        "Vigência": {"max": 5, "key": "validityDate"},
+        "Objeto": {"max": 5, "key": "object"},
+        "Valor Pactuado": {"max": 5, "key": "agreementAmount"},
+        "Valor da Contrapartida": {"max": 5, "key": "counterpartAmount"}
+    },
+    "Pagamento": {
+        "Unidade Gestora Emitente": {"max": 5, "key": "managementUnitName"},
+        "Número": {"max": 1, "key": "bankOperationID"},
+        "Conta Bancária": {"max": 1, "key": "bankAccountNumber"},
+        "Data": {"max": 1, "key": "paymentDate"},
+        "Favorecido": {"max": 5, "key": "creditorName"},
+        "CPF/CNPJ do Favorecido": {"max": 1, "key": "identificationNumber"},
+        "Valor": {"max": 5, "key": "paymentAmount"},
+        "Fonte de Recursos": {"max": 5, "key": "fundingSource"},
+        "Histórico do Pagamento": {"max": 5, "key": "paymentHistory"}
+    },
+    "Pessoal": {
+        "Nome dos Funcionários": {"max": 10, "key": "employeeName"},
+        "CPF": {"max": 10, "key": "identificationNumber"},
+        "Cargo / Função": {"max": 10, "key": "employmentContractType"},
+        "Tipo de Cargo / Emprego / Função": {"max": 10, "key": "employeePosition"},
+        "Salário por servidor": {"max": 10, "key": "employeeSalary"}
+    }
+}   

@@ -1,0 +1,12 @@
+{
+    "/result/*": {
+        "target": "http://turmalina-api.herokuapp.com/",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {
+          "^/result": ""
+        }
+    }
+  
+}

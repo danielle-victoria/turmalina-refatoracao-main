@@ -1,0 +1,371 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@import "@angular/material/theming";
+@include mat.core();
+
+:host {
+  --color-lightgray: rgba(255, 255, 255, 0.8);
+  --color-primary: #eef9fb;
+  --color-light: #eef9fb;
+  --color-dark: black;
+  --color-white: white;
+  --color-lightgreen: #6abeac;
+  --color-green: #58a897;
+  --color-greenfooter: #509c8c;
+
+  --font-family: "Montserrat", sans-serif;
+}
+
+//**Correcting position of input Bar animation** - Gabriel//
+
+.mat-form-field-appearance-legacy {
+  &.mat-form-field-can-float {
+    &.mat-form-field-should-float .mat-form-field-label,
+    .mat-input-server:focus
+      + .mat-form-field-label-wrapper
+      .mat-form-field-label {
+      transform: translateY(-8px) scale(0.7) perspective(120px) translateZ(0);
+    }
+    .mat-form-field-autofill-control:-webkit-autofill
+      + .mat-form-field-label-wrapper
+      .mat-form-field-label {
+      transform: translateY(-8px) scale(0.7) perspective(120px) translateZ(0);
+    }
+
+    .mat-input-server[label]:not(:label-shown)
+      + .mat-form-field-label-wrapper
+      .mat-form-field-label {
+      transform: translateY(-8px) scale(0.7) perspective(120px) translateZ(0);
+    }
+  }
+}
+
+.whitemap .select.city.mat-form-field-appearance-legacy {
+  &.mat-form-field-can-float {
+    &.mat-form-field-should-float .mat-form-field-label,
+    .mat-input-server:focus
+      + .mat-form-field-label-wrapper
+      .mat-form-field-label {
+      transform: translateY(-6px) scale(0.7) perspective(120px) translateZ(0);
+    }
+    .mat-form-field-autofill-control:-webkit-autofill
+      + .mat-form-field-label-wrapper
+      .mat-form-field-label {
+      transform: translateY(-6px) scale(0.7) perspective(120px) translateZ(0);
+    }
+
+    .mat-input-server[label]:not(:label-shown)
+      + .mat-form-field-label-wrapper
+      .mat-form-field-label {
+      transform: translateY(-6px) scale(0.7) perspective(120px) translateZ(0);
+    }
+  }
+}
+
+.mat-form-field-infix {
+  border: 0;
+  display: flex;
+  align-items: center;
+}
+
+//** Aligning Select Form Icons (search and calendar icons)**//
+
+.mat-form-field.select.city {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+}
+
+.mat-form-field.select.range {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+}
+
+//**//
+
+.mat-form-field-flex {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+#search-form {
+  .mat-form-field-underline {
+    display: none;
+  }
+
+  .mat-form-field-wrapper {
+    padding: 0 !important;
+    margin-left: -15px !important;
+    margin-right: -18px !important;
+  }
+  .mat-input-element {
+    padding-bottom: 4px;
+  }
+
+  .mat-form-field-infix {
+    margin-top: -10.0925em;
+    margin-left: 18px;
+    border: 0;
+    margin-top: 0.4em;
+  }
+  .mat-form-field-flex {
+    border-radius: 40px 40px 40px 40px;
+    width: 100%;
+    height: auto;
+    background-color: #f8f8f8;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24) !important;
+  }
+
+  .mat-form-field-ripple {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+  }
+
+  .mat-form-field-infix {
+    display: flex;
+    position: flex;
+    flex: auto;
+  }
+
+  .placeholder {
+    display: none;
+    background-color: #f8f8f8;
+  }
+  .mat-form-field-wrapper {
+    padding: 0 !important;
+    margin-left: -15px !important;
+    margin-right: -18px !important;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .mat-form-field-flex {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    .mat-form-field-flex {
+      width: 95%;
+    }
+  }
+
+  @media (max-width: 480px) and (min-width: 391px) {
+    .mat-form-field-flex {
+      width: 94%;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .mat-form-field-flex {
+      width: 92%;
+    }
+  }
+}
+
+.progress-circular__circle {
+  stroke: rgb(69, 204, 206);
+  stroke-width: 3;
+  font-weight: normal;
+}
+
+.progress-circular__text,
+.progress-circular__text--hidden {
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+$mat-turmalina-custom: (
+  50: #e0f2f1,
+  100: #b2dfdb,
+  200: #80cbc4,
+  300: #4db6ac,
+  400: #26a69a,
+  500: #009688,
+  600: #00897b,
+  700: #00796b,
+  800: #c2c5c5,
+  900: #004d40,
+  A100: #a7ffeb,
+  A200: #64ffda,
+  A400: #1de9b6,
+  A700: #00bfa5,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: $black-87-opacity,
+  ),
+);
+
+$my-app-primary: mat-palette($mat-turmalina-custom);
+$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent: mat-palette($mat-yellow, 400);
+
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+
+  @include angular-material-theme($alternate-theme);
+}
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$turmalina-primary: mat.define-palette(mat.$indigo-palette);
+$turmalina-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$turmalina-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$turmalina-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $turmalina-primary,
+      accent: $turmalina-accent,
+      warn: $turmalina-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($turmalina-theme);
+
+.mat-calendar-body-cell-content.mat-focus-indicator.mat-calendar-body-selected {
+  background-color: #58a897;
+}
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+.cdk-keyboard-focused
+  .mat-calendar-body-active
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+.cdk-program-focused
+  .mat-calendar-body-active
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  background-color: #eef9fb;
+}
+
+.legend-container {
+  display: flex;
+  position: relative;
+  left: -50vw;
+  width: 100vw !important;
+  padding: 10px 38px;
+  height: 110px;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.logos-container {
+  flex-basis: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-grow: 1;
+  align-items: flex-end;
+  gap: 25px;
+  max-width: 300px;
+}
+
+.logos-container a {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  max-width: 45px;
+}
+
+.logo {
+  height: 50%;
+}
+
+.flag-container {
+  flex-basis: 300px;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 25px;
+  margin-right: 5px;
+  max-width: 300px;
+}
+
+.flag {
+  height: 50%;
+}
+
+.info.legend {
+  min-width: 300px;
+  max-width: 800px;
+  height: 100px;
+  margin: 0 !important;
+  flex-grow: 2;
+  padding: 10 10px !important;
+  font-size: 0.95rem !important;
+}
+
+.legend_text,
+.legend_box {
+  opacity: 0.7 !important;
+}
+
+.legend-container.leaflet-control {
+  margin-bottom: 30px;
+}
+
+.mat-form-field {
+  border-radius: 10px !important;
+  font-weight: 500;
+  color: rgb(78, 78, 78) !important;
+}
+
+.button {
+  border-radius: 10px !important;
+}
+
+.mat-input-element {
+  font-size: 1.1rem !important;
+  opacity: 0.8;
+}
+
+.button.mat-focus-indicator.button.shadow-none.mat-raised-button.mat-button-base {
+  border-radius: 10px !important;
+}
+
+.btn.btn-primary {
+  border-radius: 5px !important;
+}
+
+span.mat-select-placeholder.mat-select-min-line.ng-tns-c93-22.ng-star-inserted {
+  font-weight: 500 !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: var(--color-green) !important;
+}

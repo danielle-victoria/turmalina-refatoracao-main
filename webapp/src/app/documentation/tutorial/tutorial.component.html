@@ -1,0 +1,24 @@
+
+<body>
+<markdown class="variable-binding" [data]="instructions"></markdown>
+<div class="margin">
+    <!-- botoes -->
+    <div>
+        <button class="button-main1" (click)="exampleOne()">Exemplo com table</button>
+        <button class = "button-main2" (click)="exampleTwo()">Exemplo com div</button>
+    </div>
+    <!--Textos-->
+    <div id="text1" [ngClass]="{
+        'aparecer': menuOne,
+        'sumir' : !menuOne
+    }">
+        <markdown class="variable-binding" [data]="example_one"></markdown>
+    </div>
+    <div id="text2"  [ngClass]="{
+        'aparecer': menuTwo,
+        'sumir' : !menuTwo
+    }">
+        <markdown class="variable-binding" [data]="example_two"></markdown>
+    </div>
+</div>
+</body>

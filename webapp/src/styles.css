@@ -1,0 +1,409 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/prismjs/themes/prism-okaidia.css";
+@import "../node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css";
+@import "../node_modules/prismjs/plugins/line-highlight/prism-line-highlight.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~leaflet/dist/leaflet.css";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+:host {
+  --weight: 540;
+  --color-dark: black;
+  --font-family: "Calibre Light", sans-serif;
+  --font-family-lato: "Lato", sans-serif;
+
+  --color-lightgray: rgba(255, 255, 255, 0.8);
+  --color-gray: rgb(151, 148, 148);
+  --color-dark: black;
+  --color-white: white;
+  --color-lightgreen: #6abeac;
+  --color-green: #58a897;
+  --color-greenfooter: #509c8c;
+  --color-primary: #eef9fb;
+  --color-light: #eef9fb;
+}
+
+/** Documentation **/
+
+table {
+  width: 100%;
+  box-shadow: 0 0 12px -9px #000;
+  font-family: var(--font-family);
+  margin-bottom: 1rem;
+}
+
+table th {
+  color: var(--color-dark);
+  font-size: 16px;
+  font-weight: 600;
+  height: 56px;
+  background-color: white !important;
+}
+
+table th[align=""],
+table th:not([align]) {
+  text-align: center;
+}
+
+table td {
+  font-size: 15px;
+  height: 48px;
+}
+
+table td:not(:last-child),
+table tr:not(:last-child) {
+  padding-right: 3rem;
+}
+
+.documentation-component table td,
+table th {
+  padding: 15px;
+}
+
+.variable-binding table tr:nth-child(odd) {
+  background: rgb(243, 243, 243);
+}
+
+h1 {
+  color: var(--color-dark);
+  font-weight: var(--weight);
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+}
+
+h1 a {
+  color: var(--color-dark);
+  font-weight: var(--weight);
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: rgb(30, 134, 160) !important;
+}
+
+h2 {
+  color: var(--color-dark);
+  font-weight: var(--weight);
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+}
+h3 {
+  color: var(--color-dark);
+  font-weight: var(--weight);
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+}
+
+.img-md img {
+  width: 870px;
+  height: 640px;
+  margin-bottom: 1rem;
+}
+
+.img-sandbox img {
+  width: 870px;
+  margin-top: 1rem;
+}
+
+/** Map **/
+
+/*Popup changes */
+
+.popup-info-display-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+  margin: 2px 5px 2px 0;
+}
+
+.popup-info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.leaflet-popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+}
+
+.leaflet-right {
+  margin-right: 30px;
+}
+
+.leaflet-bottom {
+  position: absolute;
+  left: 50%;
+  width: 18vw;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+}
+
+.legend h1 {
+  font-family: var(---font-family);
+  padding-bottom: 0 !important;
+  font-size: 18px !important;
+  color: #555 !important;
+  margin-bottom: 2px !important;
+}
+.legend_box {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.legend_box div {
+  font-family: var(---font-family);
+  display: flex !important;
+  justify-content: space-around;
+}
+
+.legend_box div div {
+  padding-top: 0.5rem;
+}
+
+.legend_text {
+  display: block;
+  text-align: center;
+}
+
+.legend i:not(:first-child) {
+  margin-left: 2rem !important;
+}
+
+.legend i {
+  width: 100%;
+  height: 20px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.info {
+  padding: 6px 8px 10px 8px;
+  margin-right: -1rem !important;
+  font: 17px/18px Arial, Helvetica, sans-serif;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 40vw;
+}
+
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+  font: 17px/18px Arial, Helvetica, sans-serif !important;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/** Material **/
+
+mat-form-field {
+  width: 100%;
+  position: flex !important;
+}
+
+/** Form Ranking **/
+
+.mat-form-field-infix {
+  display: flex;
+  align-items: center;
+}
+
+.mat-form-field-suffix {
+  display: flex;
+  align-items: center;
+}
+
+/** Adjusting input text offset from Ranking **/
+
+.mat-input-element.mat-form-field-autofill-control {
+  position: relative;
+  top: 6.5px;
+  left: -1px;
+}
+
+.mat-select-value {
+  position: relative !important;
+  top: 6.5px !important;
+  left: -1px !important;
+  opacity: 0.8;
+}
+
+.mat-paginator-page-size-select {
+  margin: 0px 4px 0 6px !important;
+  padding: 0;
+}
+
+.mat-paginator-page-size-select .mat-select-value {
+  top: 0px !important;
+}
+
+.mat-input-element.mat-form-field-autofill-control.mat-datepicker-input {
+  position: relative !important;
+  top: 0 !important;
+}
+
+/**/
+
+/** Fixing issue where city selector changes its Y position
+ when a city has been selected*/
+
+.cdk-overlay-pane.mat-datepicker-popup {
+  transform: translateY(-16px) translateX(25px) !important;
+}
+
+.cdk-overlay-pane {
+  transform: translateY(-16px) translateX(-15px) !important;
+}
+
+/** Form relatorio **/
+
+.mat-form-field-wrapper {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.mat-datepicker-content .mat-calendar {
+  width: 26rem !important;
+  height: 38rem !important;
+}
+
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  .info {
+    width: 16rem;
+  }
+  .leaflet-bottom {
+    width: 20vw;
+    left: 75%;
+  }
+}
+
+/** pop up modal **/
+
+.modal {
+  background-color: #0a1c1f71;
+}
+
+.box-modal {
+  font-family: var(--font-family) !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal-header {
+  padding: 2rem 1rem 0rem 1rem !important;
+  margin-bottom: 0 !important;
+}
+
+.modal-header h4 {
+  margin-bottom: 0 !important;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.modal-body {
+  overflow: auto;
+}
+
+.message-0 {
+  font-weight: bold;
+  margin-bottom: 20px !important;
+}
+
+.modal-content {
+  width: 40% !important;
+  align-items: center;
+  height: 85%;
+}
+
+.modal-footer {
+  padding: 0.5rem 1rem 2rem 1rem !important;
+}
+
+.modal-content .btn {
+  cursor: pointer;
+  border-radius: 1px !important;
+  box-shadow: none !important;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+  background-color: #4e949f;
+  border-color: #4e949f;
+  color: white;
+  width: 8rem;
+}
+
+.categoria-informacoes table {
+  box-shadow: none;
+  position: absolute;
+  max-height: 100%;
+  border-collapse: collapse;
+}
+
+.categoria-informacoes table tr:nth-child(even) {
+  background-color: #ebf3f2;
+  border-radius: 0;
+}
+
+.categoria-informacoes td,
+.categoria-informacoes th {
+  padding: 15px 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.categoria-informacoes th {
+  position: sticky;
+  top: 0;
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.507);
+  font-weight: 900;
+  background-color: var(--color-lightgreen) !important;
+}
+
+.categoria-informacoes td {
+  font-size: 1rem;
+  color: rgba(14, 14, 14, 0.897);
+}
+
+.categoria-informacoes td {
+  text-align: right;
+}
+
+.categoria-informacoes table thead th:first-child,
+.categoria-informacoes table > tbody td:first-child {
+  text-align: left;
+}
+
+@media screen and (min-width: 800px) and (max-width: 2000px) {
+  .modal-content {
+    min-width: 35rem !important;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .modal-content {
+    min-width: 80vw !important;
+  }
+}

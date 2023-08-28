@@ -1,0 +1,72 @@
+<div class="rank-component">
+    <div class="example-container">
+        <mat-form-field class="input">
+            <input #inputString matInput (keyup)="applyFilter(inputString.value)" placeholder="Pesquise o Município/Estado/Órgão Público">
+            <mat-icon style="color: dimgray !important" matSuffix>search</mat-icon>
+        </mat-form-field>
+    </div>
+    <article class="warning flex">
+        <div class="wrapper-warning flex">
+            Aviso! Os municípios com Porcentagem menor que 50% estão sujeitos à emissão de alerta pelo Tribunal de Contas.
+        </div>
+    </article>
+    <div class="container">
+		<div class="text-center">
+			<div *ngIf="loading" class="loading">
+				<img class="gif-loading" src="/assets/images/ezgif.com-gif-maker.gif">
+				<p class="lead">
+					<img class="loading-gif" src="/assets/images/1484.png">
+				</p>
+			</div>
+		</div>
+	</div>
+    <div class="example-container table" [style.visibility]="(loading === true) ? 'hidden' : 'visible'" >
+        <table class="mat-elevation-z8" mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="posicao">
+                <th class="section" mat-header-cell *matHeaderCellDef style="text-align:left"> Posição
+                </th>
+                <td class="element" mat-cell *matCellDef="let element" style="text-align:left"> {{element.position}} </td>
+            </ng-container>
+            <ng-container matColumnDef="orgao">
+                <th class="section" mat-header-cell *matHeaderCellDef style="text-align:left"> Órgão
+                </th>
+                <td class="element" mat-cell *matCellDef="let element" style="text-align:left"> {{element.name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="ente">
+                <th class="section" mat-header-cell *matHeaderCellDef style="text-align:left"> Ente Público
+                </th>
+                <td class="element" mat-cell *matCellDef="let element" style="text-align:left"> {{element.public_entity}} </td>
+            </ng-container>
+            <ng-container matColumnDef="avaliacao">
+                <th class="section" mat-header-cell *matHeaderCellDef> Data da Avaliação
+                </th>
+                <td class="element" mat-cell *matCellDef="let element"> {{element.end_datetime}} </td>
+            </ng-container>
+            <ng-container matColumnDef="pontuacao">
+                <th class="section tooltip-header" mat-header-cell *matHeaderCellDef style="text-align:right"> 
+                  Pontuação
+                  <span class="tooltip-icon">i</span>
+                </th>
+                <td class="element" mat-cell *matCellDef="let element" style="text-align:right"> 
+                  {{element.score}} 
+                </td>
+	        </ng-container>
+            <ng-container matColumnDef="porcentagem" >
+                <th class="section" mat-header-cell *matHeaderCellDef style="text-align:right"> Porcentagem
+                </th>
+                <td class="element" mat-cell *matCellDef="let element" style="text-align:right"> {{((element.score*100/630).toFixed(0)).replace(".",",")}}% </td>
+            </ng-container>
+            <ng-container matColumnDef="url">
+                <th class="section" mat-header-cell *matHeaderCellDef> Link
+                </th>
+                <td mat-cell *matCellDef="let element"><a [href]="element.url" class="btn btn-primary"> Portal </a></td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    <div class="amount-page">
+        <mat-paginator class= "max-pagination" [pageSizeOptions]="[10, 25, 50, 100]" showFirstLastButtons [style.visibility]="(loading === true) ? 'hidden' : 'visible'"></mat-paginator>
+    </div>
+</div>

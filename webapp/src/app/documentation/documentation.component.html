@@ -1,0 +1,83 @@
+<main class="documentation-component">
+    <aside class="sidebar"> <!-- SIDE BAR -->
+        <div class="component">
+            <div class="header">
+                <form class="navbar-form d-flex justify-content-center">
+                    <input class="navbar-input" id="search" autocomplete="off" [(ngModel)]="userQuery" [formControl]="queryField" type="text" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <div class="btn btn-outline-dark" id = "button" type="submit" ><img src="/assets/images/lupa.png" alt="alternative" width="15" height="15" ></div>
+                </form>
+                <ul class = "result" id="result"></ul>
+            </div>
+            <div class="content" id="scroll">
+                <div id = "empty -text" class="empty-text">
+                    <ol id = "ol" >                               
+                        <li *ngIf ="find(userQuery, home)">
+                            <a class="nav-link" routerLink="home">Home</a>
+                        </li>
+                        <li *ngIf="find(userQuery, tutorial)">
+                            <a class="nav-link" routerLink="tutorial">Como começar</a>
+                        </li>                      
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, revenue)">
+                            <a class="nav-link" data-link>Receita </a>
+                            <ol class="submenu ">
+                                <li *ngIf="find(userQuery, budgetRevenue)">
+                                    <a class="nav-link" routerLink="BudgetRevenue">Receita Orçamentária</a>
+                                </li>
+                                <li *ngIf="find(userQuery, extraBudgetRevenue)">
+                                    <a class="nav-link" routerLink="ExtraBudgetRevenue">Receita Extraorçamentária</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, budget)">
+                            <a class="nav-link">Despesas</a>
+                            <ol class="submenu ">
+                                <li *ngIf="find(userQuery, budgetExpenditure)">
+                                    <a class="nav-link" routerLink="BudgetExpenditure">Despesa Orçamentária</a>
+                                </li>
+                                <li *ngIf="find(userQuery, extraBudgetExpenditure)">
+                                    <a class="nav-link" routerLink="ExtraBudgetExpenditure">Despesa Extraorçamentária</a>
+                                </li>
+                                <li *ngIf="find(userQuery, paymentDocument)">
+                                    <a class="nav-link" routerLink="PaymentDocument">Documento de Pagamento</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, contract)">
+                            <a class="nav-link" routerLink="Contract">Contratos</a>
+                        </li>
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, planningInstrument)" >
+                            <a class="nav-link" routerLink="PlanningInstrument">Instrumento de Planejamento</a>
+                        </li>
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, bidding)">
+                            <a class="nav-link" routerLink="Bidding">Procedimentos Licitatórios</a>
+                        </li>
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, agreement)">
+                            <a class="nav-link" routerLink="Agreement">Convênios</a>
+                        </li>
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, employeeInformation)">
+                            <a class="nav-link" routerLink="EmployeeInformation">Pessoal</a>
+                        </li>
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, citizenInformation)">
+                            <a class="nav-link" routerLink="CitizenInformation">Informação ao Cidadão</a>
+                        </li>
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, historicalSeries)">
+                            <a class="nav-link" routerLink="HistoricalSeries">Séries Históricas</a>
+                        </li>
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, sandbox)">
+                            <a class="nav-link" routerLink="Sandbox">Ambiente de teste</a>
+                        </li>
+                        <li class="nav-item has-submenu" *ngIf="find(userQuery, scores)">
+                            <a class="nav-link" routerLink="scores">Pontuações</a>
+                        </li>
+                    </ol>
+                </div>
+                <ul class="items list"></ul>
+            </div>
+        </div>
+    </aside>
+    <article class="components">
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </article>
+</main>
