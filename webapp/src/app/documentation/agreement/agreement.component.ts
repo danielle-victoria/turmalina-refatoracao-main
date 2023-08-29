@@ -10,24 +10,24 @@ declare var require: any;
 })
 export class AgreementComponent {
     instructions = `
-    # Agreements/Terms of Partnership/Transfer Agreements/Terms of Cooperation
+    # Convênios/Termos de Parceria/Contratos de Repasse/Termos de Cooperação
 
-    The Agreements/Partnership Terms/Transfer Agreements/Cooperation Terms type has several properties that represent the basic information that makes up an administrative agreement. The following are the names of the type's defined properties:
+    O tipo Convênios/Termos de Parceria/Contratos de Repasse/Termos de Cooperação possui diversas propriedades que representam as informações básicas que compõe um convênio administrativo. A seguir estão os nomes das propriedades definidas do tipo:
     
     ## Tipo: Agreement
-    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
+    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
     | ------ | ------ | ------ |
-    | agreementID | text | Field referring to the identification number of the agreement |
-    | grantorName | text |  Text field containing the name of the grantor of the agreement|
-    | contractorName | text | Text field containing the name of the partner of the agreement|
-    | celebrationDate | date (DD/MM/YYYY) | Date referring to the conclusion of the agreement |
-    | publicationDate | date (DD/MM/YYYY) | Date referring to the publication of the agreement |
-    | validityDate | date (DD/MM/YYYY) | Effective date of the agreement |
-    | object | text | Text field referring to the description of the object of the agreement |
-    | agreementAmount | number:float | Monetary field referring to the agreed value of the agreement|
-    | counterpartAmount | text | Monetary field referring to the portion of the financial collaboration of the contracting party for the execution of the object of the agreement |
+    | agreementID | text | Campo referente ao número de identificação do convênio |
+    | grantorName | text |  Campo texto contendo o nome do concedente do convênio |
+    | contractorName | text | Campo texto contendo o nome do convenente do convênio |
+    | celebrationDate | date (DD/MM/YYYY) | Data referente à celebração do convênio |
+    | publicationDate | date (DD/MM/YYYY) | Data referente à publicação do convênio |
+    | validityDate | date (DD/MM/YYYY) | Data de vigência do convênio |
+    | object | text | Campo texto referente à descrição do objeto do convênio |
+    | agreementAmount | number:float | Campo monetário referente ao valor pactuado do convênio |
+    | counterpartAmount | text | Campo monetário referente a parcela de colaboração financeira do convenente para execução do objeto do convênio |
     
-    This is an HTML example using table
+     This is an HTML example using table
     \`\`\`html
     <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/Agreement">
         <!-- Table header  -->
@@ -59,11 +59,11 @@ export class AgreementComponent {
     </table>
     \`\`\`
     
-    This is an example in HTML using div
+    Esse é um exemplo em HTML utilizando div
     
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/Agreement">
-        <!-- Table header -->
+        <!-- Table header  -->
         <div>
             <div itemprop="agreementID">Número do Convênio</div>
             <div itemprop="grantorName">Concedente</div>

@@ -26,7 +26,7 @@ export class PlanningInstrumentComponent {
     Esse é um exemplo em HTML utilizando table
     \`\`\`html
     <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/PlanningInstrument">
-        <!-- Cabeçalho da tabela  -->
+        <!-- Table header  -->
         <tr>
             <th itemprop="multiyearPlan">Plano Plurianual (PPA)</th>
             <th itemprop="budgetGuidelinesLaw">Lei de Diretrizes Orçamentárias (LDO)</th>
@@ -45,13 +45,13 @@ export class PlanningInstrumentComponent {
     
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/PlanningInstrument">
-      <!-- Cabeçalho da tabela  -->
+      <!-- Table header  -->
       <div>
         <div itemprop="multiyearPlan">Plano Plurianual (PPA)</div>
         <div itemprop="budgetGuidelinesLaw">Lei de Diretrizes Orçamentárias (LDO)</div>
         <div itemprop="annualBudgetLaw">Lei Orçamentária Anual (LOA)</div>
       </div>
-      <!-- Dados referentes a certa linha da tabela  -->
+      <!-- Data referring to a certain row of the table  -->
       <div>
         <div itemprop="multiyearPlan"><a>href="http://pocinhos.pb.gov.br/wp-content/uploads/2021/01/LDO-2021-1.pdf">Lei de Diretrizes Orçamentárias 2021</a></div>
         <div itemprop="budgetGuidelinesLaw"><a>href="http://pocinhos.pb.gov.br/wp-content/uploads/2021/01/PPA-Plano-Plurianual-2018-2021.pdf">Lei de PPA – Plano Plurianual 2018-2021</a></div>
