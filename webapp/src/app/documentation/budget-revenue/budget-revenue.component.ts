@@ -11,25 +11,25 @@ declare var require: any;
 export class BudgetRevenueComponent {
 
     instructions = `
-    # Budget Revenue
+    # Receitas Orçamentárias
 
-    ## Type: BudgetRevenue
+    ## Tipo: BudgetRevenue
     
-    The BudgetRevenue type has different properties for representing information regarding budgetary revenue collected from various sources in order to meet public expenses resulting from the fulfillment of the functions of the municipality. The following are the names of the properties defined by the type:
+    O tipo BudgetRevenue possui diferentes propriedades para representação de informações referentes às receitas orçamentárias, arrecadadas a partir de diversas fontes a fim de atender às despesas públicas decorrentes do cumprimento das funções do município. A seguir estão os nomes das propriedades definidas pelo tipo:
     
-    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
+    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
     | ------ | ------ | ------ |
-    | managementUnitName | text | Text field containing the name of the collection management unit |
-    | managementUnitID | text | Text field containing the collection management unit code|
-    | budgetRevenueSource | text | Text field referring to the classification of the origin of the budget revenue |
-    | budgetRevenueDescription | text | Text field containing the rubric or description of the budget revenue (the resource must be identifiable) |
-    | predictedAmount | number:float | Monetary field containing the initial budget revenue forecast value |
-    | collectionAmount | number:float | Monetary field containing the amount collected from budget revenue |
+    | managementUnitName | text | Campo texto contendo o nome da unidade gestora arrecadadora |
+    | managementUnitID | text | Campo texto contendo o código da unidade gestora arrecadadora|
+    | budgetRevenueSource | text | Campo texto referente à classificação da origem da receita orçamentária |
+    | budgetRevenueDescription | text | Campo texto contendo a rúbrica ou descrição da receita orçamentária (o recurso precisa ser identificável) |
+    | predictedAmount | number:float | Campo monetário contendo o valor da previsão inicial da receita orçamentária |
+    | collectionAmount | number:float | Campo monetário contendo o valor arrecadado da receita orçamentária |
     
-    This is an HTML example using table
+    Esse é um exemplo em HTML utilizando table
     \`\`\`html
     <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/BudgetRevenue">
-        <!-- Cabeçalho da tabela  -->
+        <!-- Table header  -->
         <tr>
             <th itemprop="managementUnitName">Nome da unidade gestora</th>
             <th itemprop="managementUnitID">Código da unidade gestora</th>
@@ -49,11 +49,11 @@ export class BudgetRevenueComponent {
         </tr>
     </table>
     \`\`\`
-    This is an example in HTML using div
+    Esse é um exemplo em HTML utilizando div
     
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/BudgetRevenue">
-        <!-- Cabeçalho da tabela  -->
+        <!-- Table header  -->
         <div>
             <div itemprop="managementUnitName">Nome da unidade gestora</div>
             <div itemprop="managementUnitID">Código da unidade gestora</div>
