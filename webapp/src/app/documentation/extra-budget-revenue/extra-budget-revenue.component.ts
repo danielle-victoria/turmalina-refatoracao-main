@@ -11,28 +11,28 @@ declare var require: any;
 export class ExtraBudgetRevenueComponent {
 
     instructions = `
-    # Receitas Extraorçamentárias
+    # Extrabudgetary Income
 
-    ## Tipo: ExtraBudgetRevenue
+    ## Type: ExtraBudgetRevenue
     
-    O tipo ExtraBudgetRevenue possui diferentes propriedades para representação de informações referentes às receitas extraorçamentárias, provenientes de toda e qualquer arrecadação que não figure no orçamento público e não constitua renda do município. A seguir estão os nomes das propriedades definidas pelo tipo:
+    The ExtraBudgetRevenue type has different properties for representing information referring to extrabudgetary revenues, from any and all collections that do not figure in the public budget and do not constitute municipal income. The following are the names of the properties defined by the type:
     
-    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
+    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
     | ------ | ------ | ------ |
-    | managementUnitName | text |  Campo texto contendo o nome da unidade gestora |
-    | managementUnitID | text |  Campo texto contendo o código da unidade gestora |
-    | realizedAmount | number:float |  Campo monetário contendo o valor realizado receita extraorçamentária |
-    | extraBudgetRevenueSource | text | Campo texto referente à classificação da origem da receita extraorçamentária |
-    | extraBudgetRevenueDescription | text | Campo texto contendo a rúbrica ou descrição da receita extraorçamentária (o recurso precisa ser identificável) |
-    | extraBudgetRevenueID | text |  Campo texto contendo o código da receita extraorçamentária |
-    | nomenclature | text |  Campo texto contendo a nomenclatura utilizada na extraorçamentária |
-    | extraBudgetRevenueHistory | text |  Campo texto contendo o histórico receita extraorçamentária |
+    | managementUnitName | text |  Text field containing the name of the managing unit |
+    | managementUnitID | text |  Text field containing the management unit code |
+    | realizedAmount | number:float |  Monetary field containing the realized extrabudgetary revenue amount |
+    | extraBudgetRevenueSource | text | Text field referring to the classification of the origin of extrabudgetary income |
+    | extraBudgetRevenueDescription | text | Text field containing the rubric or description of the extrabudgetary income (the resource must be identifiable) |
+    | extraBudgetRevenueID | text |  Text field containing the extrabudgetary revenue code |
+    | nomenclature | text |  Text field containing the nomenclature used in the extrabudgetary |
+    | extraBudgetRevenueHistory | text |  Text field containing the extrabudgetary income history |
     
-    Esse é um exemplo em HTML utilizando table
+    This is an HTML example using table
     \`\`\`html
     <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/ExtraBudgetRevenue">
         <caption>Descrição</caption>
-        <!-- Cabeçalho da tabela  -->
+        <!-- Table header  -->
         <tr>
             <th itemprop="extraBudgetRevenueID">Código</th>
             <th itemprop="extraBudgetRevenueDescription">Descrição</th>
@@ -43,7 +43,7 @@ export class ExtraBudgetRevenueComponent {
             <th itemprop="extraBudgetRevenueHistory">Histórico</th>
             <th itemprop="realizedAmount">Valor Realizado</th>
         </tr>
-        <!-- Dados referentes a certa linha da tabela  -->
+        <!-- Data referring to a certain row of the table  -->
         <tr>
             <td itemprop="extraBudgetRevenueID">218810108</td>
             <td itemprop="extraBudgetRevenueDescription">ISS</td>
@@ -57,11 +57,11 @@ export class ExtraBudgetRevenueComponent {
     </table>
     \`\`\`
     
-    Esse é um exemplo em HTML utilizando div
+    This is an example in HTML using div
     
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/ExtraBudgetRevenue">
-      <!-- Cabeçalho da tabela  -->
+      <!-- Table header  -->
       <div>
           <div itemprop="extraBudgetRevenueID">Código</div>
           <div itemprop="extraBudgetRevenueDescription">Descrição</div>
@@ -72,7 +72,7 @@ export class ExtraBudgetRevenueComponent {
           <div itemprop="extraBudgetRevenueHistory">Histórico</div>
           <div itemprop="realizedAmount">Valor Realizado</div>
       </div>
-      <!-- Dados referentes a certa linha da tabela  -->
+      <!-- Data referring to a certain row of the table  -->
       <div>
         <div itemprop="extraBudgetRevenueID">218810108</div>
         <div itemprop="extraBudgetRevenueDescription">ISS</div>
