@@ -11,30 +11,30 @@ declare var require: any;
 export class PaymentDocumentComponent {
 
     instructions = `
-    # Documento de Pagamento
+    # Payment Document
 
-    ## Tipo: PaymentDocument
+    ## Type: PaymentDocument
     
-    O tipo PaymentDocument possui diversas propriedades que representam as informações básicas que compõem um documento de pagamento, estágio da despesa pública em que a unidade pública efetua o pagamento ao ente responsável pela prestação do serviço ou fornecimento do bem, recebendo a devida quitação. A seguir estão os nomes das propriedades definidas do tipo:
+    The PaymentDocument type has several properties that represent the basic information that make up a payment document, stage of public expenditure in which the public unit makes the payment to the entity responsible for providing the service or supplying the good, receiving the due discharge. The following are the names of the type's defined properties:
     
-    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
+    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
     | ------ | ------ | ------ |
-    | managementUnitName | text | Campo texto contendo o nome da unidade gestora emitente|
-    | managementUnitID | text |  Campo texto contendo o código da unidade gestora emitente|
-    | bankOperationID | text | Campo texto contendo a identificação da operação bancária realizada |
-    | bankAccountNumber | text | Campo texto contendo o número da conta bancária |
-    | paymentDate | date | Campo contendo a data do pagamento (formato DD/MM/YYYY)|
-    | identificationNumber | text | Campo texto contendo o CPF ou CNPJ do favorecido do pagamento |
-    | creditorName | text | Campo texto contendo o nome do favorecido do pagamento |
-    | paymentAmount | number:float | Campo monetário contendo o valor do pagamento |
-    | fundingSource | text | Campo texto contendo a fonte de recursos do pagamento |
-    | paymentHistory | text | Campo texto contendo a descrição do histórico do pagamento |
+    | managementUnitName | text | Text field containing the name of the issuing management unit|
+    | managementUnitID | text |  Text field containing the issuer management unit code|
+    | bankOperationID | text | Text field containing the identification of the bank operation performed |
+    | bankAccountNumber | text | Text field containing the bank account number |
+    | paymentDate | date | Field containing payment date (DD/MM/YYYY format)|
+    | identificationNumber | text | Text field containing the CPF or CNPJ of the payee |
+    | creditorName | text | Text field containing the name of the payee of the payment |
+    | paymentAmount | number:float | Monetary field containing the payment amount |
+    | fundingSource | text | Text field containing the source of funds for the payment |
+    | paymentHistory | text | Text field containing the description of the payment history |
     
-    Esse é um exemplo em HTML utilizando table
+    This is an HTML example using table
     
     \`\`\`html
     <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/PaymentDocument">
-        <!-- Cabeçalho da tabela  -->
+        <!-- Table header  -->
         <tr>
             <th itemprop="managementUnitName">Nome da unidade gestora</th>
             <th itemprop="managementUnitID">Código da unidade gestora</th>
@@ -47,7 +47,7 @@ export class PaymentDocumentComponent {
             <th itemprop="fundingSource">Fonte do recurso</th>
             <th itemprop="paymentHistory">Histórico do pagamento</th>
         </tr>
-        <!-- Dados referentes a certa linha da tabela  -->
+        <!-- Data referring to a certain row of the table  -->
         <tr>
             <td itemprop="managementUnitName">FUNDO MUNICIPAL DE SAUDE</td>
             <td itemprop="managementUnitID">03011</td>
@@ -63,7 +63,7 @@ export class PaymentDocumentComponent {
     </table>
     \`\`\`
     
-    Esse é um exemplo em HTML utilizando div
+    This is an example in HTML using div
     
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/PaymentDocument">
@@ -80,7 +80,7 @@ export class PaymentDocumentComponent {
         <div itemprop="fundingSource">Fonte do recurso</div>
         <div itemprop="paymentHistory">Histórico do pagamento</div>
       </div>
-      <!-- Dados referentes a certa linha da tabela  -->
+      <!-- Data referring to a certain row of the table  -->
       <div>
         <div itemprop="managementUnitName">FUNDO MUNICIPAL DE SAUDE</div>
         <div itemprop="managementUnitID">03011</div>
