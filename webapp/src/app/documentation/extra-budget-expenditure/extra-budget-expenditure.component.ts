@@ -11,28 +11,28 @@ declare var require: any;
 export class ExtraBudgetExpenditureComponent {
 
     instructions = `
-    # Extrabudgetary Expense
+    # Despesa Extraorçamentária
 
-    ## Type: ExtraBudgetExpenditure
+    ## Tipo: ExtraBudgetExpenditure
     
-    The ExtraBudgetExpenditure type has different properties for representing information regarding extrabudgetary expenses, expenses that do not need legislative authorization to be carried out, that is, that are not part of the public budget. Also included here are the properties related to the commitments of these expenses, through which authorized monetary values ​​are reserved to meet a specific purpose that creates a pending payment obligation for the municipality. The following are the names of the properties defined by the type:
+    O tipo ExtraBudgetExpenditure possui diferentes propriedades para representação de informações referentes às despesas extraorçamentárias, despesas que não precisam de autorização legislativa para serem realizadas, ou seja, que não integram o orçamento público. Também estão aqui inseridas as propriedades referentes aos empenhos dessas despesas, por meio do qual realiza-se reserva de valores monetários autorizados para atender um fim específico que cria para o município uma obrigação de pagamento pendente. A seguir estão os nomes das propriedades definidas pelo tipo:
     
-    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
+    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
     | ------ | ------ | ------ |
-    | paymentAmount | number:float | Monetary field containing the amount paid for the extrabudgetary expense |
-    | managementUnitName | text | Text field containing the name of the managing unit |
-    | managementUnitID | text | Text field containing the management unit code |
-    | extraBudgetExpenditureID | text |  Text field containing the code adopted for the extrabudgetary expense |
-    | extraBudgetExpenditureNomenclature | text |  Text field containing the nomenclature used for the extrabudgetary expense |
-    | moveDate | date |  Extrabudgetary expense movement date |
-    | extraBudgetExpenditureDescription | text |  Text field containing the description of the extrabudgetary expense |
-    | tabID | text | Field referring to the number of the bid extrabudgetary expense slip |
-    | tabDate | date | Text field referring to the date of the bid extrabudgetary expense tab (DD/MM/YYYY format)|
-    | creditorName | text | Text field containing the name of the creditor |
-    | identificationNumber | text | Text field containing the creditor's CPF or CNPJ |
-    | tabHistory | text | Text field containing the tab history description |
+    | paymentAmount | number:float | Campo monetário contendo o valor pago da despesa extraorçamentária |
+    | managementUnitName | text | Campo texto contendo o nome da unidade gestora |
+    | managementUnitID | text | Campo texto contendo o código da unidade gestora |
+    | extraBudgetExpenditureID | text |  Campo texto contendo o código adotado da despesa extraorçamentária |
+    | extraBudgetExpenditureNomenclature | text |  Campo texto contendo a nomenclatura utilizada da despesa extraorçamentária |
+    | moveDate | date |  Data de movimentação da despesa extraorçamentária |
+    | extraBudgetExpenditureDescription | text |  Campo texto contendo a descrição da despesa extraorçamentária |
+    | tabID | text | Campo referente ao número da guia da despesa extraorçamentária licitada |
+    | tabDate | date | Campo texto referente a data da guia da despesa extraorçamentária licitada (formato DD/MM/YYYY)|
+    | creditorName | text | Campo texto contendo o nome do credor |
+    | identificationNumber | text | Campo texto contendo o CPF ou CNPJ do credor |
+    | tabHistory | text | Campo texto contendo a descrição do histórico da guia |
     
-    This is an HTML example using table
+    Esse é um exemplo em HTML utilizando table
     \`\`\`html
     <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/ExtraBudgetExpenditure">
         <caption>Descrição</caption>
@@ -69,11 +69,11 @@ export class ExtraBudgetExpenditureComponent {
     </table>
     \`\`\`
     
-    This is an example in HTML using div
+    Esse é um exemplo em HTML utilizando div
     
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/ExtraBudgetExpenditure">
-      <!-- Table header  -->
+      <!-- Table header -->
       <div>
         <div itemprop="managementUnitName">Nome da unidade gestora</div>
         <div itemprop="managementUnitID">Código da unidade gestora</div>
