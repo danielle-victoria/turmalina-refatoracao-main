@@ -15,7 +15,7 @@ export class ExampleTwoComponent {
       <div itemscope itemtype="Unipt.org/Bid">
           <div>
               <caption>Descrição</caption>
-              <!-- Cabeçalho da tabela  -->
+              <!-- Table header  -->
               <div>
                   <div itemprop="managementUnitName">Nome da unidade gestora</div>
                   <div itemprop="managementUnitID">Código da unidade gestora</div>
@@ -28,7 +28,7 @@ export class ExampleTwoComponent {
                   <div itemprop="identificationNumber">CNPJ do paricipante</div>
                   <div itemprop="bidderProposalAmount">Valor da proposta</div>
               </div>
-              <!-- Dados referentes a certa linha da tabela  -->
+              <!-- Data referring to a certain row of the table  -->
               <div>
                   <div itemprop="managementUnitName">Secretaria Municipal de Saúde</div>
                   <div itemprop="managementUnitID">00000.000-0</div>
