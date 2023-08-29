@@ -11,24 +11,24 @@ declare var require: any;
 export class EmployeeInformationComponent  {
 
     instructions = `
-    # Pessoal
+    # Guys
 
-    ## Tipo: EmployeeInformation
+    ## Type: EmployeeInformation
     
-    O tipo EmployeeInformation possui diversas propriedades que representam as informações básicas sobre o quadro de servidores do município, agregando informações que abrangem cargos, salários e tipo de vínculo. A seguir estão os nomes das propriedades definidas do tipo:
+    The EmployeeInformation type has several properties that represent basic information about the city's public servants, aggregating information that includes positions, salaries and type of bond. The following are the names of the type's defined properties:
     
-    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
+    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
     | ------ | ------ | ------ |
-    | employeeName | text | Campo texto contendo o nome do servidor |
-    | identificationNumber | text |  Campo texto contendo o CPF do servidor |
-    | employmentContractType | text | Campo texto contendo o tipo de contrato do servidor |
-    | employeePosition | text | Campo texto contendo o tipo de cargo/função do servidor |
-    | employeeSalary | number:float | Campo monetário contendo o valor do salário do servidor |
+    | employeeName | text | Text field containing the server name |
+    | identificationNumber | text |  Text field containing the server's CPF |
+    | employmentContractType | text | Text field containing the server contract type |
+    | employeePosition | text | Text field containing the type of position/function of the server |
+    | employeeSalary | number:float | Monetary field containing the server's salary value |
     
-    Esse é um exemplo em HTML utilizando table
+    This is an HTML example using table
     \`\`\`html
     <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/EmployeeInformation">
-        <!-- Cabeçalho da tabela  -->
+        <!-- Table header  -->
         <tr>
             <th itemprop="employeeName">Nome do Servidor</th>
             <th itemprop="identificationNumber">CPF</th>
@@ -36,7 +36,7 @@ export class EmployeeInformationComponent  {
             <th itemprop="employeePosition">Cargo</th>
             <th itemprop="employeeSalary">Salário</th>
         </tr>
-        <!-- Dados referentes a certa linha da tabela  -->
+        <!-- Data referring to a certain row of the table  -->
         <tr>
             <td itemprop="employeeName">ABDENE FRANCISCO DA SILVA</td>
             <td itemprop="identificationNumber">XXX.582.004-XX</td>
@@ -47,11 +47,11 @@ export class EmployeeInformationComponent  {
     </table>
     \`\`\`
     
-    Esse é um exemplo em HTML utilizando div
+    This is an example in HTML using div
     
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/EmployeeInformation">
-      <!-- Cabeçalho da tabela  -->
+      <!-- Table header  -->
       <div>
         <div itemprop="employeeName">Nome do Servidor</div>
         <div itemprop="identificationNumber">CPF</div>
@@ -59,7 +59,7 @@ export class EmployeeInformationComponent  {
         <div itemprop="employeePosition">Cargo</div>
         <div itemprop="employeeSalary">Salário</div>
       </div>
-      <!-- Dados referentes a certa linha da tabela  -->
+      <!-- Data referring to a certain row of the table  -->
       <div>
         <div itemprop="employeeName">ABDENE FRANCISCO DA SILVA</div>
         <div itemprop="identificationNumber">XXX.582.004-XX</div>
