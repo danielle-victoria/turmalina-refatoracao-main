@@ -11,19 +11,19 @@ declare var require: any;
 export class CitizenInformationComponent {
 
     instructions = `
-    # Informação ao Cidadão
+    # Citizen Information
     
-    Para avaliar a existência de ferramentas que auxiliam o acesso à informação por parte dos cidadãos, três classes foram criadas. Cada uma identifica um componente facilitador do acesso à informação. As classes são utilizadas conforme a tabela abaixo
+    To assess the existence of tools that help citizens access information, three classes were created. Each one identifies a component that facilitates access to information. Classes are used according to the table below
     
-    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
+    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
     | ------ | ------ | ------ |
-    | tm-sic | classe| Campo o qual possui uma classe com o termo "tm-sic", a fim de endereçar o Serviço de Informações ao Cidadão do portal |
-    | tm-search | classe | Campo o qual possui uma classe com o termo "tm-search", a fim de identificar uma ferramenta de pesquisa dentro do portal |
-    | tm-execute | classe | Campo o qual possui uma classe com o termo "tm-execute", a fim de identificar que aquele botão/link exibirá dados a partir do seu clique |
+    | tm-sic | classe| Field which has a class with the term "tm-sic", in order to address the Citizen Information Service of the portal |
+    | tm-search | classe | Field which has a class with the term "tm-search", in order to identify a search tool within the portal |
+    | tm-execute | classe | Field which has a class with the term "tm-execute", in order to identify that that button/link will display data from your click |
 
-    Esse é um exemplo em HTML da implementação do link para o SIC
+    This is an HTML example of the implementation of the link to the SIC
     \`\`\`html
-    <!--Implementação dos campos que direcionam para a página do SIC-->
+    <!--Implementation of fields that direct to the SIC page-->
     <div>
         <a href="http://pocinhos.pb.gov.br/SIC" class="tm-sic"> Link para o Serviço de Informações ao Cidadão </a>
         <!--Ou-->
@@ -31,10 +31,10 @@ export class CitizenInformationComponent {
     </div>
     \`\`\`
     
-    Esse é um exemplo em HTML da implementação da caixa de pesquisa e do botão execute
+    This is an HTML example of implementing the search box and the execute button
     
     \`\`\`html
-    <!--Implementação de um formulário de pesquisa básico-->
+    <!--Implementing a basic search form-->
     <div>
         <form method="get" action="https://www.joaopessoa.pb.gov.br/" class="tm-search">
             <input type="search">
