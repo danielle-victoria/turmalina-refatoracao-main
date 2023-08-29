@@ -11,26 +11,26 @@ declare var require: any;
 export class PaymentDocumentComponent {
 
     instructions = `
-    # Payment Document
+    # Documento de Pagamento
 
-    ## Type: PaymentDocument
+    ## Tipo: PaymentDocument
     
-    The PaymentDocument type has several properties that represent the basic information that make up a payment document, stage of public expenditure in which the public unit makes the payment to the entity responsible for providing the service or supplying the good, receiving the due discharge. The following are the names of the type's defined properties:
+    O tipo PaymentDocument possui diversas propriedades que representam as informações básicas que compõem um documento de pagamento, estágio da despesa pública em que a unidade pública efetua o pagamento ao ente responsável pela prestação do serviço ou fornecimento do bem, recebendo a devida quitação. A seguir estão os nomes das propriedades definidas do tipo:
     
-    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
+    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
     | ------ | ------ | ------ |
-    | managementUnitName | text | Text field containing the name of the issuing management unit|
-    | managementUnitID | text |  Text field containing the issuer management unit code|
-    | bankOperationID | text | Text field containing the identification of the bank operation performed |
-    | bankAccountNumber | text | Text field containing the bank account number |
-    | paymentDate | date | Field containing payment date (DD/MM/YYYY format)|
-    | identificationNumber | text | Text field containing the CPF or CNPJ of the payee |
-    | creditorName | text | Text field containing the name of the payee of the payment |
-    | paymentAmount | number:float | Monetary field containing the payment amount |
-    | fundingSource | text | Text field containing the source of funds for the payment |
-    | paymentHistory | text | Text field containing the description of the payment history |
+    | managementUnitName | text | Campo texto contendo o nome da unidade gestora emitente|
+    | managementUnitID | text |  Campo texto contendo o código da unidade gestora emitente|
+    | bankOperationID | text | Campo texto contendo a identificação da operação bancária realizada |
+    | bankAccountNumber | text | Campo texto contendo o número da conta bancária |
+    | paymentDate | date | Campo contendo a data do pagamento (formato DD/MM/YYYY)|
+    | identificationNumber | text | Campo texto contendo o CPF ou CNPJ do favorecido do pagamento |
+    | creditorName | text | Campo texto contendo o nome do favorecido do pagamento |
+    | paymentAmount | number:float | Campo monetário contendo o valor do pagamento |
+    | fundingSource | text | Campo texto contendo a fonte de recursos do pagamento |
+    | paymentHistory | text | Campo texto contendo a descrição do histórico do pagamento |
     
-    This is an HTML example using table
+    Esse é um exemplo em HTML utilizando table
     
     \`\`\`html
     <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/PaymentDocument">
@@ -63,11 +63,11 @@ export class PaymentDocumentComponent {
     </table>
     \`\`\`
     
-    This is an example in HTML using div
+    Esse é um exemplo em HTML utilizando div
     
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/PaymentDocument">
-      <!-- Cabeçalho da tabela  -->
+      <!-- Table header  -->
       <div>
         <div itemprop="managementUnitName">Nome da unidade gestora</div>
         <div itemprop="managementUnitID">Código da unidade gestora</div>
