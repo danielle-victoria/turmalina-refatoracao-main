@@ -27,12 +27,12 @@ export class RankComponent implements OnInit{
     this.getRankingInformation();
   }
 
-  /// Calcula a posição pelo método Dense (Sem saltos de posição após os empates)
+  /// Calculate position by Dense method (No jumps in position after ties)
 
   calculatePosition(index: number) {
     let position = index + 1;
   
-    // Verificar empates com base no score
+    // Check ties based on score
     let previousScore = Number(this.rank[index]["score"]);
     let numEqualScores = 0;
     for (let i = index - 1; i >= 0; i--) {
@@ -48,7 +48,7 @@ export class RankComponent implements OnInit{
     return position + '°';
   }
 
-  /// Calcula a posição pelo método min (Saltos de posição após os empates)
+ /// Calculate position by method min (Position skips after ties)
 
   /*calculatePosition(index: number) {
     let position = index + 1;
