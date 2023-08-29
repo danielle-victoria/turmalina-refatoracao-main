@@ -10,20 +10,20 @@ declare var require: any;
 })
 export class HistoricalSeriesComponent {
   instructions = `
-    # Historical Series
+    # Séries Históricas
     
-    To evaluate the existence of tools that allow the user to consult data from previous years, three classes were created. Each one identifies a specific component that together assemble the selectors of the portal's historical series. That is, there is a tool made up of these components which gives access to the history of expenses, budgets, processes, etc. The classes are used according to the table below:
+    Para avaliar a existência de ferramentas que permitam ao usuário consultar dados de anos anteriores, três classes foram criadas. Cada uma identifica um componente específico que juntos montam os seletores das séries históricas do portal. Isto é, existe uma ferramenta constituída por esses componentes a qual dá acesso ao histórico de gastos, orçamentos, processos, etc. As classes são utilizadas conforme a tabela abaixo:
 
     
-    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
+    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
     | ------ | ------ | ------ |
-    | tm-date | classe | Field which has a class with the term "tm-date". This field is a **FULL DATES** selector for historical series|
-    | tm-month | classe | Field which has a class with the term "tm-month". This field is a **MONTHS** selector of historical series |
-    | tm-year | classe | Field which has a class with the term "tm-year". This field is a **YEARS** selector of historical series |
+    | tm-date | classe | Campo o qual possui uma classe com o termo "tm-date". Esse campo é um seletor de **DATAS COMPLETAS** das séries históricas|
+    | tm-month | classe | Campo o qual possui uma classe com o termo "tm-month". Esse campo é um seletor de **MESES** das séries históricas |
+    | tm-year | classe | Campo o qual possui uma classe com o termo "tm-year".  Esse campo é um seletor de **ANOS** das séries históricas |
 
-    These are some examples of implementation of the historical series form.
-    Different HTML structures can be found when consulting the portals. \n\n
-    **Example 1**
+    Esses são alguns exemplos de implementação do formulário de séries históricas. 
+    Podem ser encontradas diferentes estruturas HTML ao consultar os portais. \n\n
+    **Exemplo 1**
     \`\`\`html
     <div>
         <form action="">
