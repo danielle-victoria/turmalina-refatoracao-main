@@ -48,7 +48,7 @@ export class TutorialComponent {
     <div>
         <table>
             <caption>Descrição</caption>
-            <!-- Cabeçalho da tabela  -->
+            <!-- Table header  -->
             <tr>
                 <th>Nome da unidade gestora</th>
                 <th>Código da unidade gestora</th>
@@ -61,7 +61,7 @@ export class TutorialComponent {
                 <th>CNPJ do paricipante</th>
                 <th>Valor da proposta</th>
             </tr>
-            <!-- Dados referentes a certa linha da tabela  -->
+            <!-- Data referring to a certain row of the table  -->
             <tr>
                 <td>Secretaria Municipal de Saúde</td>
                 <td>00000.000-0</td>
@@ -81,7 +81,7 @@ export class TutorialComponent {
     \`\`\`html
     <div>
         <caption>Descrição</caption>
-        <!-- Cabeçalho da tabela  -->
+        <!-- Table header  -->
         <div>
             <div>Nome da unidade gestora</div>
             <div>Código da unidade gestora</div>
@@ -94,7 +94,7 @@ export class TutorialComponent {
             <div>CNPJ do paricipante</div>
             <div>Valor da proposta</div>
         </div>
-        <!-- Dados referentes a certa linha da tabela  -->
+        <!-- Data referring to a certain row of the table  -->
         <div>
             <div>Secretaria Municipal de Saúde</div>
             <div>00000.000-0</div>
@@ -118,7 +118,7 @@ export class TutorialComponent {
     <div>
         <table itemscope>
             <caption>Descrição</caption>
-            <!-- Cabeçalho da tabela  -->
+            <!-- Table header  -->
             <tr>
                 <th>Nome da unidade gestora</th>
                 <th>Código da unidade gestora</th>
@@ -131,7 +131,7 @@ export class TutorialComponent {
                 <th>CNPJ do paricipante</th>
                 <th>Valor da proposta</th>
             </tr>
-            <!-- Dados referentes a certa linha da tabela  -->
+            <!-- Data referring to a certain row of the table  -->
             <tr>
                 <td>Secretaria Municipal de Saúde</td>
                 <td>00000.000-0</td>
@@ -151,7 +151,7 @@ export class TutorialComponent {
     \`\`\`html
     <div itemscope>
         <caption>Descrição</caption>
-        <!-- Cabeçalho da tabela  -->
+        <!-- Table header  -->
         <div>
             <div>Nome da unidade gestora</div>
             <div>Código da unidade gestora</div>
@@ -164,7 +164,7 @@ export class TutorialComponent {
             <div>CNPJ do paricipante</div>
             <div>Valor da proposta</div>
         </div>
-        <!-- Dados referentes a certa linha da tabela  -->
+        <!-- Data referring to a certain row of the table  -->
         <div>
             <div>Secretaria Municipal de Saúde</div>
             <div>00000.000-0</div>
@@ -185,7 +185,7 @@ export class TutorialComponent {
     <div>
         <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/Bidding">
             <caption>Descrição</caption>
-            <!-- Cabeçalho da tabela  -->
+            <!-- Table header  -->
             <tr>
                 <th>Nome da unidade gestora</th>
                 <th>Código da unidade gestora</th>
@@ -198,7 +198,7 @@ export class TutorialComponent {
                 <th>CNPJ do paricipante</th>
                 <th>Valor da proposta</th>
             </tr>
-            <!-- Dados referentes a certa linha da tabela  -->
+            <!-- Data referring to a certain row of the table  -->
             <tr>
                 <td>Secretaria Municipal de Saúde</td>
                 <td>00000.000-0</td>
@@ -217,7 +217,7 @@ export class TutorialComponent {
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/Bidding">
         <caption>Descrição</caption>
-        <!-- Cabeçalho da tabela  -->
+        <!-- Table header  -->
         <div>
             <div>Nome da unidade gestora</div>
             <div>Código da unidade gestora</div>
@@ -230,7 +230,7 @@ export class TutorialComponent {
             <div>CNPJ do paricipante</div>
             <div>Valor da proposta</div>
         </div>
-        <!-- Dados referentes a certa linha da tabela  -->
+        <!-- Data referring to a certain row of the table  -->
         <div>
             <div>Secretaria Municipal de Saúde</div>
             <div>00000.000-0</div>
@@ -264,7 +264,7 @@ export class TutorialComponent {
     <div>
         <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/Bidding">
             <caption>Descrição</caption>
-            <!-- Cabeçalho da tabela  -->
+            <!-- Table header  -->
             <tr>
                 <th itemprop="managementUnitName">Nome da unidade gestora</th>
                 <th itemprop="managementUnitID">Código da unidade gestora</th>
@@ -277,7 +277,7 @@ export class TutorialComponent {
                 <th itemprop="identificationNumber">CNPJ do paricipante</th>
                 <th itemprop="bidderProposalAmount">Valor da proposta</th>
             </tr>
-            <!-- Dados referentes a certa linha da tabela  -->
+            <!-- Data referring to a certain row of the table  -->
             <tr>
                 <td itemprop="managementUnitName">Secretaria Municipal de Saúde</th>
                 <td itemprop="managementUnitID">00000.000-0</th>
@@ -298,7 +298,7 @@ export class TutorialComponent {
     <div>
         <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/Bidding">
             <caption>Descrição</caption>
-            <!-- Cabeçalho da tabela  -->
+            <!-- Table header  -->
             <div>
                 <div itemprop="managementUnitName">Nome da unidade gestora</div>
                 <div itemprop="managementUnitID">Código da unidade gestora</div>
@@ -311,7 +311,7 @@ export class TutorialComponent {
                 <div itemprop="identificationNumber">CNPJ do paricipante</div>
                 <div itemprop="bidderProposalAmount">Valor da proposta</div>
             </div>
-            <!-- Dados referentes a certa linha da tabela  -->
+            <!-- Data referring to a certain row of the table  -->
             <div>
                 <div itemprop="managementUnitName">Secretaria Municipal de Saúde</div>
                 <div itemprop="managementUnitID">00000.000-0</div>
@@ -403,7 +403,7 @@ export class TutorialComponent {
     <div itemscope itemtype="Unipt.org/Bid">
         <table>
             <caption>Descrição</caption>
-            <!-- Cabeçalho da tabela  -->
+            <!-- Table header  -->
             <tr>
                 <th itemprop="managementUnitName">Nome da unidade gestora</th>
                 <th itemprop="managementUnitID">Código da unidade gestora</th>
@@ -416,7 +416,7 @@ export class TutorialComponent {
                 <th itemprop="identificationNumber">CNPJ do paricipante</th>
                 <th itemprop="bidderProposalAmount">Valor da proposta</th>
             </tr>
-            <!-- Dados referentes a certa linha da tabela  -->
+            <!-- Data referring to a certain row of the table  -->
             <tr>
                 <td itemprop="managementUnitName">Secretaria Municipal de Saúde</th>
                 <td itemprop="managementUnitID">00000.000-0</th>
@@ -438,7 +438,7 @@ export class TutorialComponent {
     <div itemscope itemtype="Unipt.org/Bid">
         <div>
             <caption>Descrição</caption>
-            <!-- Cabeçalho da tabela  -->
+            <!-- Table header  -->
             <div>
                 <div itemprop="managementUnitName">Nome da unidade gestora</div>
                 <div itemprop="managementUnitID">Código da unidade gestora</div>
@@ -451,7 +451,7 @@ export class TutorialComponent {
                 <div itemprop="identificationNumber">CNPJ do paricipante</div>
                 <div itemprop="bidderProposalAmount">Valor da proposta</div>
             </div>
-            <!-- Dados referentes a certa linha da tabela  -->
+            <!-- Data referring to a certain row of the table  -->
             <div>
                 <div itemprop="managementUnitName">Secretaria Municipal de Saúde</div>
                 <div itemprop="managementUnitID">00000.000-0</div>
