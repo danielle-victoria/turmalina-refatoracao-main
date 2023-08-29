@@ -2,13 +2,13 @@ import { polygon } from 'leaflet';
 
 
 export class Municipio{
-    nome!: string;
-    dataAtualizacao: any;
+    name!: string;
+    dateUpdate: any;
     urlPortal!: string;
     polygon: any;
-    pontuacao!: number;
-    pontuacaoMaxima!: number;
-    posicao!: number;
+    score!: number;
+    maxScore!: number;
+    position!: number;
     rankingColor: string;
 
     constructor() {
