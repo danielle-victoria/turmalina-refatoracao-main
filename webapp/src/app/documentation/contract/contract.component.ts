@@ -11,25 +11,25 @@ declare var require: any;
 export class ContractComponent  {
 
   instructions = `
-  # Contract
+  # Contrato
 
-  ## Type: Contract
+  ## Tipo: Contract
   
-  The Contract type has several properties that represent the basic information that make up an administrative contract, through which parties with different interests make agreements or adjustments, transferring some right or subjecting themselves to some obligation. The following are the names of the type's defined properties:
+  O tipo Contract possui diversas propriedades que representam as informações básicas que compõem um contrato administrativo, por meio do qual partes que tenham interesses diversos realizam acordos ou ajustes, transferindo entre si algum direito ou se sujeitando a alguma obrigação. A seguir estão os nomes das propriedades definidas do tipo:
   
-  | PROPERTY | EXPECTED TYPE | DESCRIPTION |
+  | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
   | ------------- | ------------- | ------------- |
-  | managementUnitName | text | Text field containing the name of the interested contracting management unit |
-  | managementUnitID | text | Text field containing the interested contracting management unit code |
-  | contractorName | text | Text field containing the contractor's name |
-  | identificationNumber | text | Numeric field containing the contractor's CPF/CNPJ |
-  | publicationDate | date | Date referring to the publication of the contract extract (DD/MM/YYYY format) |
-  | validityDate | date | Effective date of the contract (DD/MM/YYYY formation) |
-  | contractAmount | number:float | Monetary field containing the contracted amount |
-  | object | text | Field referring to the description of the object of the contract |
-  | contractID | text | Text field containing the contract identification code |
+  | managementUnitName | text | Campo texto contendo o nome da unidade gestora contratante interessado |
+  | managementUnitID | text | Campo texto contendo o código da unidade gestora contratante interessado |
+  | contractorName | text | Campo texto contendo o nome do contratado |
+  | identificationNumber | text | Campo numérico contendo o CPF/CNPJ do contratado |
+  | publicationDate | date | Data referente à publicação do extrato de contrato (formato DD/MM/YYYY) |
+  | validityDate | date | Data de vigência do contrato (formação DD/MM/YYYY) |
+  | contractAmount | number:float | Campo monetário contendo o valor contratado |
+  | object | text | Campo referente à descrição do objeto do contrato |
+  | contractID | text | Campo texto contendo o código de identificação do contrato |
   
-  This is an HTML example using table
+  Esse é um exemplo em HTML utilizando table
   
   \`\`\`html
   <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/Contract">
@@ -47,7 +47,7 @@ export class ContractComponent  {
           <th itemprop="contractAmount">Valor Contratado</th>
       </tr>
   
-      <!-- Data referring to each row of the table  -->
+      <!-- Data referring to a certain row of the table  -->
       <tr>
           <td itemprop="managementUnitName">Secretaria Municipal de Saúde - SMS</td>
           <td itemprop="managementUnitID">2030</td>
@@ -63,7 +63,7 @@ export class ContractComponent  {
   </table>
   \`\`\`
   
-  This is an example in HTML using div
+  Esse é um exemplo em HTML utilizando div
   
   \`\`\`html
   <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/Contract">
@@ -80,7 +80,7 @@ export class ContractComponent  {
       <div itemprop="validityDate">Fim da Vigência</div>
       <div itemprop="contractAmount">Valor Contratado</div>
     </div>
-    <!-- Data referring to a certain row of the table  -->
+    <!-- Data referring to a certain row of the table -->
     <div>
       <div itemprop="managementUnitName">Secretaria Municipal de Saúde - SMS</div>
       <div itemprop="managementUnitID">2030</div>
