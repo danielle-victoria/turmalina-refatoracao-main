@@ -44,9 +44,9 @@ def report_edit(raw_evaluation, date):
 
     totalRM = str(totalReceived)+'/'+str(totalMax)
 
-    totalGrid = round(((totalReceived / totalMax) * 10), 1)
-    totalGrid = str(totalGrid)
-    totalGrid = totalGrid.replace('.', ',')
+    totalGrade = round(((totalReceived / totalMax) * 10), 1)
+    totalGrade = str(totalGrade)
+    totalGrade = totalGrade.replace('.', ',')
     
 
     # =================== Graphics ===================
@@ -96,7 +96,7 @@ def report_edit(raw_evaluation, date):
 
     context = {
         'record': raw_evaluation,
-        'totalGrid': totalGrid,
+        'totalGrade': totalGrade,
         'totalReceivedMax': totalReceivedMax,
         'totalReceivedMaxString': totalReceivedMaxString,
         'totalRM': totalRM,
