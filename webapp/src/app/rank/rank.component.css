@@ -24,7 +24,7 @@
     margin-bottom: 17px !important;
 }*/
 
-/********************* Aviso Ranking ************************/
+/********************* Ranking Warning ************************/
 
 .warning {
     display: flex;
@@ -96,13 +96,13 @@
 .tooltip-header:hover::after {
     opacity: 1;
 }
-  /* Adicione estas propriedades CSS adicionais para garantir que a aparência original do elemento seja mantida */
+  /* Add these additional CSS properties to ensure the element's original appearance is maintained */
 th.section {
     background-color: #f5f5f5;
     border: none;
     padding-right: 16px;
 } 
-/* Estilo adicionado para a classe .tooltip-icon */
+/* Added styling for the .tooltip-icon class */
 .tooltip-header .tooltip-icon {
     position: relative;
     top: 7px;
