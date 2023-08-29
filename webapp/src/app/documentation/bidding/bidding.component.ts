@@ -11,31 +11,31 @@ declare var require: any;
 export class BiddingComponent {
 
     instructions = `
-    # Bidding Procedures
+    # Procedimentos Licitatórios
 
-    ## Type: Bidding
+    ## Tipo: Bidding
     
-    The type referring to bidding procedures (Bidding) has different properties for representing information about public biddings, through which the municipality can contract works, services, purchases and disposals. Following are the names of all properties defined by the type:
+    O tipo referente aos procedimentos licitatórios (Bidding) possui diferentes propriedades para representação de informações sobre as licitações públicas, por meio do qual o munícipio pode realizar contratações de obras, serviços, compras e alienações. A seguir estão os nomes de todas as propriedades definidas pelo tipo:
     
-    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
+    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
     | ------------- | ------------- | ------------- |
-    | notice | URL | Field containing the link to the document referring to the public notice of the bidding procedure |
-    | bidModality | text | Text field containing the name of the bidding modality |
-    | managementUnitName | text | Text field containing the name of the management unit of the interested sector |
-    | managementUnitID | text | Text field containing the management unit code of the interested sector |
-    | publicationDate | date | Date referring to the publication of the bidding notice (DD/MM/YYYY format) |
-    | realizationDate | date | Bidding date (DD/MM/YYYY format) |
-    | bidID | text | Text field containing the bid number |
-    | object | text | Text field referring to the description of the object of the bidding |
-    | bidderName | text | Text field containing the name of the bidder (winner or loser) |
-    | identificationNumber | text | Numerical field containing the CPF/CNPJ of the bidder (winner or loser) |
-    | bidderProposalAmount | number:float | Monetary field containing the last bid amount of the bidder's proposal (winner or loser) |
+    | notice | URL | Campo contendo o link do documento referente ao edital do procedimento licitatório |
+    | bidModality | text | Campo texto contendo o nome da modalidade de licitação |
+    | managementUnitName | text | Campo texto contendo o nome da unidade gestora do setor interessado |
+    | managementUnitID | text | Campo texto contendo o código da unidade gestora do setor interessado |
+    | publicationDate | date | Data referente à publicação do edital de licitação (formato DD/MM/YYYY) |
+    | realizationDate | date | Data de realização da licitação (formato DD/MM/YYYY) |
+    | bidID | text | Campo texto contendo o número da licitação |
+    | object | text | Campo texto referente à descrição do objeto da licitação |
+    | bidderName | text | Campo texto contendo o nome do licitante (vencedor ou perdedor) |
+    | identificationNumber | text | Campo numérico contendo o CPF/CNPJ do licitante (vencedor ou perdedor) |
+    | bidderProposalAmount | number:float | Campo monetário contendo o valor do último lance da proposta do licitante (vencedor ou perdedor) |
     
-    This is an HTML example using table
+    Esse é um exemplo em HTML utilizando table
     
     \`\`\`html
     <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/Bidding">
-      <!-- Cabeçalho da tabela  -->
+      <!-- Table header  -->
       <tr>
         <th itemprop="managementUnitName">Nome da unidade gestora</th>
         <th itemprop="managementUnitID">Código da unidade gestora</th>
@@ -68,7 +68,7 @@ export class BiddingComponent {
     </table>
     \`\`\`
     
-    This is an example in HTML using div
+    Esse é um exemplo em HTML utilizando div
     
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/Bidding">
