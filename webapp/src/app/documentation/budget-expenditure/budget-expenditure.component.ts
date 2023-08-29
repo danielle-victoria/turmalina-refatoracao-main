@@ -11,36 +11,36 @@ declare var require: any;
 export class BudgetExpenditureComponent {
 
     instructions = `
-    # Budget Expense
+    # Despesa Orçamentária
 
-    ## Type: BudgetExpenditure
+    ## Tipo: BudgetExpenditure
     
-    The BudgetExpenditure type has different properties for representing information regarding budgetary expenditures, commitment to spend public resources, authorized by the competent Power, in order to meet a collective need foreseen in the budget. Also included here are properties related to expenditure commitments, through which authorized monetary values ​​are reserved to meet a specific purpose that creates a pending payment obligation for the municipality. The following are the names of the properties defined by the type:
+    O tipo BudgetExpenditure possui diferentes propriedades para representação de informações referentes às despesas orçamentárias, compromisso de gasto de recursos públicos, autorizados pelo Poder competente, com o intuito de atender a uma necessidade coletiva prevista no orçamento. Também estão aqui inseridas as propriedades referentes aos empenhos de despesa, por meio do qual realiza-se reserva de valores monetários autorizados para atender um fim específico que cria para o município uma obrigação de pagamento pendente. A seguir estão os nomes das propriedades definidas pelo tipo:
     
-    | PROPERTY | EXPECTED TYPE | DESCRIPTION |
+    | PROPRIEDADE | TIPO ESPERADO | DESCRIÇÃO |
     | ------ | ------ | ------ |
-    | fixedAmount | number:float | Monetary field containing the budget amount set by the Annual Budget Law |
-    | paymentAmount | number:float | Monetary field containing the amount paid for the budget expense |
-    | managementUnitName | text | Text field containing the name of the managing unit |
-    | managementUnitID | text | Text field containing the management unit code |
-    | budgetExpenditureFunction | text | Text field containing the description of the function/purpose of the budgetary expenditure |
-    | budgetExpenditureSubfunction | text | Text field containing the description of the budgetary expenditure subfunction |
-    | budgetExpenditureProgram | text | Text field containing the budget expenditure program |
-    | budgetExpenditureAction | text | Text field containing the budget expense action |
-    | economicCategory | text | Field referring to the classification of the economic category of the budget expenditure |
-    | budgetNature| text | Field referring to the classification of the nature of the budgetary expense |
-    | budgetExpenditureModality | text | Text field containing the budget expenditure modality |
-    | budgetExpenditureElement | text |  Text field containing the budget expense element |
-    | comittedExpenditureID | text | Field referring to the commitment note number of the bid budget expense |
-    | comittedExpenditureDate | date | Commitment date of the bid budget expenditure (DD/MM/YYYY format)|
-    | creditorName | text | Text field containing the payee's name |
-    | identificationNumber | text | Text field containing the beneficiary's CPF or CNPJ |
-    | bidID | text | Text field referring to the bidding order number of the budgetary expense bid |
-    | bidModality | text | Text field containing the name of the bidding modality of the budgeted expense bid |
-    | comittedValue | number:float | Field referring to the pledged amount of the bid budget expense |
-    | comittedExpenditureHistory | text | Text field containing the description of the commitment history |
+    | fixedAmount | number:float | Campo monetário contendo o valor do orçamento fixado pela Lei Orçamentária Anual |
+    | paymentAmount | number:float | Campo monetário contendo o valor pago da despesa orçamentária |
+    | managementUnitName | text | Campo texto contendo o nome da unidade gestora |
+    | managementUnitID | text | Campo texto contendo o código da unidade gestora |
+    | budgetExpenditureFunction | text | Campo texto contendo a descrição da função/finalidade da despesa orçamentária |
+    | budgetExpenditureSubfunction | text | Campo texto contendo a descrição da subfunção da despesa orçamentária |
+    | budgetExpenditureProgram | text | Campo texto contendo o programa da despesa orçamentária |
+    | budgetExpenditureAction | text | Campo texto contendo a ação da despesa orçamentária |
+    | economicCategory | text | Campo referente à classificação da categoria econômica da despesa orçamentária |
+    | budgetNature| text | Campo referente à classificação da natureza da despesa orçamentária |
+    | budgetExpenditureModality | text | Campo texto contendo a modalidade da despesa orçamentária |
+    | budgetExpenditureElement | text |  Campo texto contendo o elemento da despesa orçamentária |
+    | comittedExpenditureID | text | Campo referente ao número da nota de empenho da despesa orçamentária licitada |
+    | comittedExpenditureDate | date | Data do empenho da despesa orçamentária licitada (formato DD/MM/YYYY)|
+    | creditorName | text | Campo texto contendo o nome do favorecido |
+    | identificationNumber | text | Campo texto contendo o CPF ou CNPJ do favorecido |
+    | bidID | text | Campo texto referente ao número de ordem da licitação da despesa orçamentária licitada |
+    | bidModality | text | Campo texto contendo o nome da modalidade de licitação da despesa orçamentária licitada |
+    | comittedValue | number:float | Campo referente ao valor empenhado da despesa orçamentária licitada |
+    | comittedExpenditureHistory | text | Campo texto contendo a descrição do histórico do empenho |
     
-    This is an HTML example using table
+    Esse é um exemplo em HTML utilizando table
     
     \`\`\`html
     <table itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/BudgetExpenditure">
@@ -94,7 +94,7 @@ export class BudgetExpenditureComponent {
     </table>
     \`\`\`
     
-    This is an example in HTML using div
+    Esse é um exemplo em HTML utilizando div
     
     \`\`\`html
     <div itemscope itemtype="https://turmalina.tcepb.tc.br/documentation/BudgetExpenditure">
