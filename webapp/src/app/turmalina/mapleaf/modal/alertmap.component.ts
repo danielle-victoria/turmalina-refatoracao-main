@@ -28,12 +28,7 @@ export interface AlertModel {
         <img *ngIf="imageurl!=undefined" src="{{imageurl}}">
     </div>
   `,
-  styles: [
-    '.modalmap-content{width: 5% !important; align-items: center; height: 45%;}',
-    '.boxmap-modal{display:flex; justify-content: center; flex-direction: column;align-items: center;height: 89vh;}',
-    '.boxmap-modal .modalmap-content{position: relative;z-index: 2;}',
-    '.boxmap-modal img{position: relative;z-index: 1;position: absolute;left: 0;top: 0;width: 100%;height:100%;opacity: 0.2;}',
-  ]
+  styleUrls: ['./alertmap.component.css']
 })
 export class AlertMapComponent extends SimpleModalComponent<AlertModel, null> implements AlertModel {
   title!: string;
