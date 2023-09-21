@@ -562,7 +562,7 @@ import {
   
   
       if (!this.apiLoaded){
-        this.ApiRequest.open("GET", environment.apiUrl + "turmalina_units");
+        this.ApiRequest.open("GET", environment.apiUrl + "_units");
         this.ApiRequest.send();
         
         this.ApiRequest.onload = () => {

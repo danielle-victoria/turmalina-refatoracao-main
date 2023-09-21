@@ -33,7 +33,7 @@ def evaluations_output():
     return jsonify(evaluations)
 
 
-@app.route("/api/turmalina_dates")
+@app.route("/api/_dates")
 def evaluations_dates():
     """
     [Route that returns all dates and identification of evaluations of a Public Entity]
@@ -61,7 +61,7 @@ def evaluations_dates():
     return jsonify(dates)
 
 
-@app.route("/api/turmalina_units")
+@app.route("/api/_units")
 def evaluations_units():
     """
     [Route that returns all Management Units available in the Database]
@@ -82,7 +82,7 @@ def evaluations_units():
     return jsonify(units)
 
 
-@app.route("/api/turmalina_evaluationbyid")
+@app.route("/api/_evaluationbyid")
 def evaluations_by_id():
     """
     [Route that returns a rating from your ID]
@@ -109,7 +109,7 @@ def evaluations_by_id():
     return jsonify(evaluation)
 
 
-@app.route("/api/turmalina_managementunitdate")
+@app.route("/api/_managementunitdate")
 def evaluation_managementunitdate(management_unit, date):
     """
     [Route taken to return the assessment with the best score given the Management Unit and date]
@@ -149,7 +149,7 @@ def evaluation_managementunitdate(management_unit, date):
     return jsonify(evaluation)
 
 
-@app.route("/api/turmalina_report")
+@app.route("/api/_report")
 def turmalina_report():
     """
     [Route made for the Tourmaline report, which will receive the parameters by the function and return the evaluation to the previous route]
@@ -177,7 +177,7 @@ def turmalina_report():
     return send_from_directory(f"{package_directory}/report/outputs/", "Report.pdf")
 
 
-@app.route("/api/turmalina_entitiestimestamp")
+@app.route("/api/_entitiestimestamp")
 def evaluations_entitiestimestamp():
     """
     [Route that will return all ratings given two time periods and a Public Entity. If both timestamps are sent, the route returns all ratings that fall between the two dates.
@@ -215,7 +215,7 @@ def evaluations_entitiestimestamp():
     return jsonify(evaluations)
 
 
-@app.route("/api/turmalina_entitieslatest")
+@app.route("/api/_entitieslatest")
 def evaluations_entities():
     """
     [Route that will return the last X ratings given a Public Entity and X amount.]
@@ -248,7 +248,7 @@ def evaluations_entities():
     return jsonify(evaluations)
 
 
-@app.route("/api/turmalina_getbestevaluation")
+@app.route("/api/_getbestevaluation")
 def get_best_evaluation():
     """
     [Route that will return the best evaluation of a Management Unit.]
@@ -290,7 +290,7 @@ def get_best_evaluation():
     return jsonify(evaluation)
 
 
-@app.route("/api/turmalina_ranking")
+@app.route("/api/_ranking")
 def evaluations_ranking():
     """
     [Route that will return a ranking among all Management Units based on the last evaluation score of each one.]
@@ -334,7 +334,7 @@ def evaluations_ranking():
     return jsonify(evaluations_ranking)
 
 
-@app.route("/api/turmalina_summarymean")
+@app.route("/api/_summarymean")
 def evaluations_summarymean():
     """
     [Route that will return a JSON of the averages of the categories among all the Management Units based on the last evaluation score of each one.]
@@ -386,7 +386,7 @@ def evaluations_summarymean():
     return jsonify(summary_mean)
 
 
-@app.route("/api/turmalina_sandbox", methods=['POST'])
+@app.route("/api/_sandbox", methods=['POST'])
 def send_to_crawler():
     """
     [Route to send a request to the crawler to run a test on the past sites.]
