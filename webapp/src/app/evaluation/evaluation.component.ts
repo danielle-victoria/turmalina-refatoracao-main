@@ -562,7 +562,7 @@ import {
   
   
       if (!this.apiLoaded){
-        this.ApiRequest.open("GET", environment.apiUrl + "_units");
+        this.ApiRequest.open("GET", environment.apiUrl + "units");
         this.ApiRequest.send();
         
         this.ApiRequest.onload = () => {

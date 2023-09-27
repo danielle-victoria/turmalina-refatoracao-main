@@ -156,7 +156,7 @@ export class ReportComponent implements OnInit, OnDestroy{
     this.datesApi = []
     this.datesApi.push([moment.utc(this.resultsEvaluation["start_datetime"]).format("DD/MM/YYYY"), moment.utc(this.resultsEvaluation["end_datetime"]).format("DD/MM/YYYY")])
     let dateFormated = moment.utc(this.datesApi[0][1], 'DD/MM/YYYY').format("YYYY-MM-DD")
-    this.reportUrl = environment.apiUrl + "_report?management_unit=" + (this.resultsEvaluation["management_unit"]["name"]) + "&date=" + dateFormated
+    this.reportUrl = environment.apiUrl + "report?management_unit=" + (this.resultsEvaluation["management_unit"]["name"]) + "&date=" + dateFormated
     this.getSafeUrl(this.reportUrl)
   }
 
@@ -232,7 +232,7 @@ export class ReportComponent implements OnInit, OnDestroy{
 
 
     if (!this.apiLoaded){
-      this.ApiRequest.open("GET", environment.apiUrl + "_units");
+      this.ApiRequest.open("GET", environment.apiUrl + "units");
       this.ApiRequest.send();
       
       this.ApiRequest.onload = () => {

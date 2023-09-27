@@ -45,7 +45,7 @@ export class MapleafService {
   public getTurmalinaStamp(municipio:string, firststamp:string, secondstamp:string){
     let promise = new Promise<void>((resolve, reject) => {
       this.http
-      .get<any[]>(this.apiUrl + '_entitiestimestamp' + '?entity=' + municipio + '&first_timestamp=' + firststamp + ' 00:00:00.000' + '&second_timestamp=' + secondstamp + ' 23:59:59.999')
+      .get<any[]>(this.apiUrl + 'entitiestimestamp' + '?entity=' + municipio + '&first_timestamp=' + firststamp + ' 00:00:00.000' + '&second_timestamp=' + secondstamp + ' 23:59:59.999')
       .toPromise()
       .then(
         data => {
@@ -63,7 +63,7 @@ export class MapleafService {
   public getTurmalinaEvaluationId(id:string){
     let promise = new Promise<void>((resolve, reject) => {
       this.http
-      .get<any[]>(this.apiUrl + '_evaluationbyid' + '?id=' + id)
+      .get<any[]>(this.apiUrl + 'evaluationbyid' + '?id=' + id)
       .toPromise()
       .then(
         data => {
@@ -81,7 +81,7 @@ export class MapleafService {
   public getTurmalinaMean(){
     let promise = new Promise<void>((resolve, reject) => {
       this.http
-      .get<any[]>(this.apiUrl + '_summarymean')
+      .get<any[]>(this.apiUrl + 'summarymean')
       .toPromise()
       .then(
         data => {
@@ -99,7 +99,7 @@ export class MapleafService {
   public getRanking(){
     let promise = new Promise<void>((resolve, reject) => {
       this.http
-      .get<any[]>(this.apiUrl + '_ranking')
+      .get<any[]>(this.apiUrl + 'ranking')
       .toPromise()
       .then(
         data => {
@@ -115,13 +115,13 @@ export class MapleafService {
   }
 
   public getRankingModel(): Observable<any>{
-    return this.http.get<any[]>(this.apiUrl + '_ranking')
+    return this.http.get<any[]>(this.apiUrl + 'ranking')
   }
 
   public getTurmalinaDates(municipio:string){
     let promise = new Promise<void>((resolve, reject) => {
       this.http
-      .get<any[]>(this.apiUrl + '_dates' + '?entity=' + municipio)
+      .get<any[]>(this.apiUrl + 'dates' + '?entity=' + municipio)
       .toPromise()
       .then(
         data => {
@@ -139,7 +139,7 @@ export class MapleafService {
   public getSummaryPoints(municipio:string, quantity:string){
     let promise = new Promise<void>((resolve, reject) => {
       this.http
-      .get<any[]>(this.apiUrl + '_entitieslatest' + '?entity=' + municipio + '&quantity=' +  quantity)
+      .get<any[]>(this.apiUrl + 'entitieslatest' + '?entity=' + municipio + '&quantity=' +  quantity)
       .toPromise()
       .then(
         data => {
@@ -170,7 +170,7 @@ export class MapleafService {
   public getBestEvaluation(municipio:string) {
     let promise = new Promise<void>((resolve, reject) => {
       this.http
-      .get<any>(this.apiUrl + '_getbestevaluation' + '?entity=' + municipio)
+      .get<any>(this.apiUrl + 'getbestevaluation' + '?entity=' + municipio)
       .toPromise()
       .then(
         data => {
@@ -198,7 +198,7 @@ export class MapleafService {
   public getIBGE(){
     let promise = new Promise<void>((resolve, reject) => {
       this.http
-      .get<IbgeData[]>(this.apiUrl + '_units')
+      .get<IbgeData[]>(this.apiUrl + 'units')
       .toPromise()
       .then(
         data => {
