@@ -126,6 +126,7 @@ def evaluation_managementunitdate(management_unit, date):
     # date = request.args.get('date')
 
     try:
+        
         date = datetime.strptime(date, '%Y-%m-%d')
         evaluation = (
             Evaluation
@@ -133,7 +134,7 @@ def evaluation_managementunitdate(management_unit, date):
             .join(ManagementUnit)
             .where(
                 (ManagementUnit.name == management_unit) &
-                (Evaluation.end_datetime.year == date.year) &
+                (Evaluation.end_datetime.year== date.year) &
                 (Evaluation.end_datetime.month == date.month) &
                 (Evaluation.end_datetime.day == date.day) &
                 (Evaluation.status == True) & (Evaluation.show == True)
@@ -168,13 +169,14 @@ def turmalina_report():
 
     if not evaluation:
         print(f'Evaluation not found!')
-        return
+        return 
     try:
         ReportEditor.report_edit(evaluation, date)
     except Exception as err:
         print(f"Erro: {err}")
-        return
+        return 
     return send_from_directory(f"{package_directory}/report/outputs/", "Report.pdf")
+    
 
 
 @app.route("/api/entitiestimestamp")

@@ -4,6 +4,8 @@ from report.evaluation import EVALUATION_MODEL, dictionary_order
 import os
 import copy
 
+
+
 package_directory = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -123,8 +125,6 @@ def report_edit(raw_evaluation, date):
     document.save(f'{package_directory}/outputs/Report.docx')
 
     # Code to convert docx to pdf Libreoffice
-    helpers.convert_to_pdf(
-        f'{package_directory}/outputs/Report.docx', f'{package_directory}/outputs'
-    )
+    helpers.convert_to_pdf(f'{package_directory}/outputs/Report.docx', f'{package_directory}/outputs')
 
 ### {{ chartScore }} in ReportTemplate.docx
