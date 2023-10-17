@@ -8,6 +8,7 @@ import {
   } from '@angular/core';
   import { UntypedFormControl } from '@angular/forms';
   import { MapleafService } from '../turmalina/mapleaf/mapleaf.service';
+  import { EvaluationService } from '../evaluation/evaluation.service';
   import { Chart, registerables } from 'chart.js';
   import { ColorGenerator } from './color-generator.model';
   import { ReplaySubject, Subject } from 'rxjs';
@@ -115,6 +116,7 @@ import {
   
     constructor(
       public mapleafservice: MapleafService,
+      public evaluationservice: EvaluationService,
       public changeDetectorRef: ChangeDetectorRef,
       private SimpleModalService: SimpleModalService
     ) {
@@ -176,7 +178,7 @@ import {
                                   `;
   
       this.mapleafservice.getSubCategoryJson().subscribe((namesAndMaxPoints: any) => {
-        let results = this.mapleafservice.bestEvaluation.detailedEvaluation;
+        let results = this.evaluationservice.bestEvaluation.detailedEvaluation;
   
         // categoryNamePt is itemtype names and categoryName is itemprops keys
         let categoryNamePt = this.categoryPtLabels[i]
@@ -237,24 +239,24 @@ import {
     /*** sum points of categories ***/
     subCategories() {
   
-      let summary = this.mapleafservice.bestEvaluation.summaryEvaluation;
+      let summary = this.evaluationservice.bestEvaluation.summaryEvaluation;
   
       for (var category of this.categoryLabels) {
         let value = summary[category];
         this.categoryValues.push(Number(value));
       }
-      this.scoreTotal = this.mapleafservice.bestEvaluation.score;
+      this.scoreTotal = this.evaluationservice.bestEvaluation.score;
     }
   
     getTimeSeries() {
-      if (this.mapleafservice.resultsSummaryPoints != undefined) {
+      if (this.evaluationservice.resultsSummaryPoints != undefined) {
         let indexSeries = -1;
         let indexAnterior = 0;
         let dateAnterior = ' ';
-        let resultsLength = this.mapleafservice.resultsSummaryPoints.length;
+        let resultsLength = this.evaluationservice.resultsSummaryPoints.length;
         for (var i = resultsLength - 1; i >= 0; i = i - 1) {
-          let results = this.mapleafservice.resultsSummaryPoints;
-          let evaluation = this.mapleafservice.resultsSummaryPoints.slice(i)[0];
+          let results = this.evaluationservice.resultsSummaryPoints;
+          let evaluation = this.evaluationservice.resultsSummaryPoints.slice(i)[0];
           if (evaluation.endDateTime != 'undefined') {
             let dateEvaluation = moment.utc(evaluation.endDateTime)
               .locale('pt')
@@ -331,7 +333,7 @@ import {
       }
       this.categoryValues = [];
       this.seriesValues = [];
-      this.summaryMean = Object.entries(this.mapleafservice.summaryMean).map(
+      this.summaryMean = Object.entries(this.evaluationservice.summaryMean).map(
         ([k, v]) => v
       );
       this.subCategories();
@@ -457,10 +459,10 @@ import {
       this.miniturmalina = false;
       this.loading = true;
       
-      this.mapleafservice.getBestEvaluation(nome).then((_) => {
-        this.mapleafservice.getSummaryPoints(nome, '12').then((_) => {
-          this.entityURL = this.mapleafservice.resultsEntityURL;
-          this.mapleafservice.getTurmalinaMean().then((_) => {
+      this.evaluationservice.getBestEvaluation(nome).then((_) => {
+        this.evaluationservice.getSummaryPoints(nome, '12').then((_) => {
+          this.entityURL = this.evaluationservice.resultsEntityURL;
+          this.evaluationservice.getTurmalinaMean().then((_) => {
             this.loading = false;
             this.conditionGraph = false;
             this.nameCity = nome;

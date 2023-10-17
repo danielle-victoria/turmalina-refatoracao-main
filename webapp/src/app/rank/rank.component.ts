@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
-import { MapleafService } from '../turmalina/mapleaf/mapleaf.service';
+import { RankService } from '../rank/rank.service';
 import { RankingModel } from '../shared/models/ranking.model';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
@@ -20,7 +20,7 @@ export class RankComponent implements OnInit{
   visibility:boolean = false;
   loading: boolean = true;
 
-  constructor(private mapleafservice: MapleafService) {
+  constructor(private rankservice: RankService) {
   }
 
   ngOnInit(){
@@ -66,12 +66,12 @@ export class RankComponent implements OnInit{
   }*/
 
   getRankingInformation(){
-    this.mapleafservice.getRanking().then(_ => { 
+    this.rankservice.getRanking().then(_ => { 
       this.visibility = true
       setTimeout(() => {
         this.loading = false;
       },1000);
-      this.rank = this.mapleafservice.ranking
+      this.rank = this.rankservice.ranking
       for(var i in this.rank){
         this.rankingList.push(
           {

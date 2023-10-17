@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { UntypedFormControl, FormControl } from '@angular/forms';
 import { MapleafService } from '../turmalina/mapleaf/mapleaf.service';
+import { ReportService } from '../report/report.service';
+import { EvaluationService } from '../evaluation/evaluation.service';
 import { MatPaginator} from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { DateAdapter } from '@angular/material/core';
@@ -53,7 +55,7 @@ export class ReportComponent implements OnInit, OnDestroy{
   ApiRequest = new XMLHttpRequest();
   lastDate: any;
 
-  constructor(public mapleafservice: MapleafService, private dateAdapter: DateAdapter<any>, private sanitizer: DomSanitizer){
+  constructor(public mapleafservice: MapleafService, public evaluationservice: EvaluationService, public reportservice: ReportService, private dateAdapter: DateAdapter<any>, private sanitizer: DomSanitizer){
     this.dateAdapter.setLocale('pt');
   }
 
@@ -66,10 +68,10 @@ export class ReportComponent implements OnInit, OnDestroy{
     this.listDatesApi = []
     if(selectedValue){
       // await this.mapleafservice.getTurmalinaDates(selectedValue.replace(/[áÁàÀâÂãéÉêÊíÍóÓôÔõúÚüç']/g, this.removeAcentos));
-      await this.mapleafservice.getTurmalinaDates(selectedValue);
+      await this.reportservice.getTurmalinaDates(selectedValue);
 
-      for(var i in this.mapleafservice.resultsDates){
-        let resultDate = this.mapleafservice.resultsDates[i]
+      for(var i in this.reportservice.resultsDates){
+        let resultDate = this.reportservice.resultsDates[i]
         this.listDatesApi.push([moment.utc(resultDate["end_datetime"]).format("DD/MM/YYYY"), resultDate["id"]])
       }
 
@@ -151,7 +153,7 @@ export class ReportComponent implements OnInit, OnDestroy{
 
   createTable(){
     this.resultsEvaluation = []
-    this.resultsEvaluation = this.mapleafservice.resultsEvaluationId
+    this.resultsEvaluation = this.evaluationservice.resultsEvaluationId
 
     this.datesApi = []
     this.datesApi.push([moment.utc(this.resultsEvaluation["start_datetime"]).format("DD/MM/YYYY"), moment.utc(this.resultsEvaluation["end_datetime"]).format("DD/MM/YYYY")])
@@ -163,7 +165,7 @@ export class ReportComponent implements OnInit, OnDestroy{
   getDadosApi(id:string){
     this.miniturmalina = false
     this.loading = true
-    this.mapleafservice.getTurmalinaEvaluationId(id).then(_ => {
+    this.evaluationservice.getTurmalinaEvaluationId(id).then(_ => {
       this.loading = false;
       this.createTable();
     })

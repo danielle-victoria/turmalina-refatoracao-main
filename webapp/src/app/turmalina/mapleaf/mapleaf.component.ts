@@ -1,6 +1,9 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
 import { MapleafService } from './mapleaf.service';
+import { RankService } from '../../rank/rank.service';
+import { EvaluationService } from '../../evaluation/evaluation.service';
+import { ReportService } from '../../report/report.service';
 import { UntypedFormControl } from '@angular/forms';
 import 'leaflet';
 import * as d3 from 'd3';
@@ -450,7 +453,7 @@ export class MapleafComponent implements OnInit {
       }, { closeOnClickOutside: true });
   }
 
-  constructor(private zone: NgZone, private mapleafservice: MapleafService, private SimpleModalService: SimpleModalService, private _router: Router) {
+  constructor(private zone: NgZone, private mapleafservice: MapleafService, private reportservice: ReportService, private rankservice: RankService, private SimpleModalService: SimpleModalService, private _router: Router) {
   }
 
   ngOnInit(): void{
@@ -470,7 +473,7 @@ export class MapleafComponent implements OnInit {
       this.filterCities();
     });
 
-    this.mapleafservice.getRankingModel().subscribe((data: any) => {
+    this.rankservice.getRankingModel().subscribe((data: any) => {
       this.convertJsonObjMunicipio(data);
       this.layers = this.getTilesByZoomLevel();
       this.fetchTiles(this.stateTiles);
