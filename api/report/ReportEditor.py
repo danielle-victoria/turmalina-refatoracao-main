@@ -13,7 +13,7 @@ def report_edit(raw_evaluation, date):
     # key name workaround
     raw_evaluation['detailed_evaluation']['Bid'] = raw_evaluation['detailed_evaluation']['Bidding']
     del raw_evaluation['detailed_evaluation']['Bidding']
-
+    
     document = DocxTemplate(f"{package_directory}/resources/ReportTemplate.docx")
 
     evaluation = raw_evaluation['detailed_evaluation']

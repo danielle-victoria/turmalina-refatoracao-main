@@ -163,7 +163,7 @@ def turmalina_report():
 
     management_unit = request.args.get('management_unit')
     date = request.args.get('date')
-
+    
     response = evaluation_managementunitdate(management_unit, date)
     evaluation = response.json
 

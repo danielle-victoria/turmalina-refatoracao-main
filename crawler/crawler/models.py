@@ -2,15 +2,16 @@
 
 import os
 from datetime import datetime, timedelta
-from peewee import Model, ForeignKeyField, TextField, DateTimeField, BooleanField, IntegerField, SqliteDatabase
-from crawler.settings import DB_NAME, DB_USER, DB_PASS, DB_HOST, DB_PORT
+from peewee import Model, ForeignKeyField, TextField, DateTimeField, BooleanField, IntegerField, SqliteDatabase, BlobField
+#from crawler.settings import DB_NAME, DB_USER, DB_PASS, DB_HOST, DB_PORT
+import sqlite3
 
 # Database setup
 if os.getenv('TURMALINADEV') == 'true':
     from playhouse.sqlite_ext import SqliteExtDatabase, JSONField
     db_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     db = SqliteExtDatabase(os.path.join(db_path, 'dbs', 'test.db'))
-else:
+'''else:
     from playhouse.postgres_ext import PostgresqlExtDatabase, JSONField
 
     db = PostgresqlExtDatabase(
@@ -20,7 +21,7 @@ else:
         host=DB_HOST,
         port=DB_PORT
     )
-
+'''
 
 def get_evaluations():
     return [e for e in Evaluation.select()]
@@ -55,7 +56,6 @@ class BaseModel(Model):
     class Meta:
         database = db
 
-
 class ManagementUnit(BaseModel):
     name = TextField(unique=True)
     public_entity = TextField()
@@ -82,6 +82,9 @@ class Evaluation(BaseModel):
     )
     status = BooleanField(default=False)
     show = BooleanField(default=False)
+    PDFreport = BlobField(null=True)
+    
+    
 
     def __str__(self):
         return f'{self.management_unit.name} ({self.start_datetime}) - score: {self.score} - show: {self.show}'

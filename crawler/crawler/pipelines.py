@@ -5,6 +5,7 @@
 
 from crawler.models import Evaluation
 from datetime import datetime
+from ...api.report.ReportEditor import report_edit
 
 
 class PortalEvaluationPipeline:
@@ -20,7 +21,9 @@ class PortalEvaluationPipeline:
         return item
 
     def close_spider(self, spider):
+
         if not spider.test_execution:
+        
             Evaluation.update(
                 log_path=spider.settings.get('LOG_FILE'),
                 detailed_evaluation=spider.evaluation.detailed_export(),
@@ -28,7 +31,11 @@ class PortalEvaluationPipeline:
                 score=spider.evaluation.score,
                 end_datetime=datetime.now(),
                 status=True,
-                show=True
+                show=True,
+                
             ).where(
                 Evaluation.id == self.evaluation.id
             ).execute()
+            
+
+	    
